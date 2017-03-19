@@ -20,7 +20,8 @@ class WindowController: NSWindowController {
     
     @IBAction func runAction(_ sender: Any) {
         //When the run button is pressed
-        runOutlet.isEnabled = false //Disable button while code is running
+//        runOutlet.isEnabled = false //Disable button while code is running
+        runOutlet.image = #imageLiteral(resourceName: "Stop")
         
         let path = "/usr/bin/env" //( Path
         let arguments = [Bundle.main.path(forResource: "Hello", ofType: "py")]
@@ -28,7 +29,8 @@ class WindowController: NSWindowController {
         let task = Process.launchedProcess(launchPath: path, arguments: arguments as! [String])
         task.waitUntilExit()
         
-        runOutlet.isEnabled = true //Enable button again
+//        runOutlet.isEnabled = true //Enable button again
+        runOutlet.image = #imageLiteral(resourceName: "Run")
     }
 
 

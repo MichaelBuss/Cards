@@ -702,13 +702,13 @@
                                         </buttonCell>
                                     </button>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="0271F6AC-D3B1-4DB0-B52C-EF9C69D2B269" label="Run" paletteLabel="Run" toolTip="Run" image="NSRightFacingTriangleTemplate" id="bG3-s6-c8E">
+                                <toolbarItem implicitItemIdentifier="0271F6AC-D3B1-4DB0-B52C-EF9C69D2B269" label="Run" paletteLabel="Run" toolTip="Run" image="Run" id="bG3-s6-c8E">
                                     <size key="minSize" width="40" height="25"/>
                                     <size key="maxSize" width="40" height="25"/>
                                     <button key="view" verticalHuggingPriority="750" id="4Fv-9A-T8c">
                                         <rect key="frame" x="0.0" y="14" width="40" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSRightFacingTriangleTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Z3T-8W-qhs">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="Run" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Z3T-8W-qhs">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                             <string key="keyEquivalent">r</string>
@@ -787,18 +787,34 @@
             </objects>
             <point key="canvasLocation" x="74" y="281"/>
         </scene>
-        <!--View Controller-->
+        <!--Configure View Controller-->
         <scene sceneID="64i-S4-nc6">
             <objects>
-                <viewController id="WuU-Eu-OsU" sceneMemberID="viewController">
+                <viewController id="WuU-Eu-OsU" customClass="ConfigureViewController" customModule="Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="VjD-8M-RWo">
                         <rect key="frame" x="0.0" y="0.0" width="318" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="seH-wq-xd8">
+                                <rect key="frame" x="113" y="133" width="92" height="32"/>
+                                <buttonCell key="cell" type="push" title="Connect" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MNt-uu-ttd">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="connectAction:" target="WuU-Eu-OsU" id="IMK-rd-vWn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="seH-wq-xd8" firstAttribute="centerY" secondItem="VjD-8M-RWo" secondAttribute="centerY" id="9mS-Ly-8cE"/>
+                            <constraint firstItem="seH-wq-xd8" firstAttribute="centerX" secondItem="VjD-8M-RWo" secondAttribute="centerX" id="xa8-DG-VSO"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="yUg-Dt-YhU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="548" y="247"/>
+            <point key="canvasLocation" x="565" y="255"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -862,7 +878,7 @@
         <image name="NSActionTemplate" width="14" height="14"/>
         <image name="NSAddTemplate" width="11" height="11"/>
         <image name="NSRemoveTemplate" width="11" height="11"/>
-        <image name="NSRightFacingTriangleTemplate" width="9" height="12"/>
         <image name="NSShareTemplate" width="11" height="16"/>
+        <image name="Run" width="19" height="19"/>
     </resources>
 </document>
