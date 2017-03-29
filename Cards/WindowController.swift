@@ -10,11 +10,15 @@ import Cocoa
 
 class WindowController: NSWindowController {
     @IBOutlet weak var runOutlet: NSButton!
-
+    @IBOutlet weak var statusOutlet: NSToolbarItem!
+    @IBOutlet weak var statusTextOutlet: NSTextFieldCell!
+    @IBOutlet weak var statusTextFieldOutlet: NSTextField!
     
     override func windowDidLoad() {
         super.windowDidLoad()
-    
+        statusTextFieldOutlet.isSelectable = false
+        statusTextFieldOutlet.stringValue = "Connect to Robot 🤖 via Bluetooth ⚠️"
+
         // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     }
     

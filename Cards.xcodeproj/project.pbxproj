@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C0080A61E89ACDE004FE404 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0080A51E89ACDE004FE404 /* TextView.swift */; };
 		4C1D65C51E7D9D6B009F04B8 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D65C41E7D9D6B009F04B8 /* WindowController.swift */; };
 		4C1D65C71E7DD286009F04B8 /* Hello.py in Resources */ = {isa = PBXBuildFile; fileRef = 4C1D65C61E7DD286009F04B8 /* Hello.py */; };
 		4C6798AB1E7E9DB300B80CD2 /* ConfigureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6798AA1E7E9DB300B80CD2 /* ConfigureViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C0080A51E89ACDE004FE404 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextView.swift; path = ../TextView.swift; sourceTree = "<group>"; };
 		4C1D65C41E7D9D6B009F04B8 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		4C1D65C61E7DD286009F04B8 /* Hello.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Hello.py; sourceTree = "<group>"; };
 		4C6798AA1E7E9DB300B80CD2 /* ConfigureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigureViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				4C1D65C41E7D9D6B009F04B8 /* WindowController.swift */,
 				4CB174991E79344E000D333D /* ViewController.swift */,
 				4C6798AA1E7E9DB300B80CD2 /* ConfigureViewController.swift */,
+				4C0080A51E89ACDE004FE404 /* TextView.swift */,
 				4CB1749B1E79344E000D333D /* Document.swift */,
 				4CB174A01E79344E000D333D /* Assets.xcassets */,
 				4CB174A21E79344E000D333D /* Main.storyboard */,
@@ -156,6 +159,7 @@
 				4CB1749F1E79344E000D333D /* Document.xcdatamodeld in Sources */,
 				4C1D65C51E7D9D6B009F04B8 /* WindowController.swift in Sources */,
 				4CB1749A1E79344E000D333D /* ViewController.swift in Sources */,
+				4C0080A61E89ACDE004FE404 /* TextView.swift in Sources */,
 				4CB174981E79344E000D333D /* AppDelegate.swift in Sources */,
 				4CB1749C1E79344E000D333D /* Document.swift in Sources */,
 				4C6798AB1E7E9DB300B80CD2 /* ConfigureViewController.swift in Sources */,

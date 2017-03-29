@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E189a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="7104"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="12062"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="the Touch Bar" message="Use a version of macOS with Touch Bar support." minToolsVersion="8.1" minSystemVersion="10.12.1" requiredIntegratedClassName="NSTouchBar"/>
     </dependencies>
@@ -779,6 +779,9 @@
                     </touchBar>
                     <connections>
                         <outlet property="runOutlet" destination="4Fv-9A-T8c" id="Y1H-hq-TTg"/>
+                        <outlet property="statusOutlet" destination="iUg-wM-bvI" id="JRd-f1-Tby"/>
+                        <outlet property="statusTextFieldOutlet" destination="Rca-DQ-kEi" id="Sfs-DR-IJe"/>
+                        <outlet property="statusTextOutlet" destination="2H4-WN-6Z7" id="TbQ-ar-6hX"/>
                         <segue destination="5gI-5U-AMq" kind="relationship" relationship="window.shadowedContentViewController" id="nsd-lR-9xd"/>
                     </connections>
                 </windowController>
@@ -838,7 +841,7 @@
                                     <rect key="frame" x="1" y="1" width="478" height="268"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="2yh-pZ-Iqy">
+                                        <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="2yh-pZ-Iqy" customClass="TextView" customModule="Cards" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="478" height="268"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -868,6 +871,9 @@
                             <constraint firstItem="isy-cz-xaP" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" id="xIZ-6s-zTp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textViewOutlet" destination="2yh-pZ-Iqy" id="Q4B-J8-kx4"/>
+                    </connections>
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

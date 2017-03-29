@@ -9,9 +9,9 @@
 import Cocoa
 
 class ViewController: NSViewController {
+    @IBOutlet var textViewOutlet: NSTextView!
 
     override func viewDidLoad() {
-
         // Do any additional setup after loading the view.
     }
 
