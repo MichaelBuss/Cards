@@ -798,8 +798,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="318" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oaf-y1-xDY">
+                                <rect key="frame" x="138" y="226" width="43" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="9OQ-iB-iy4"/>
+                                    <constraint firstAttribute="height" constant="66" id="fVh-Ci-cmX"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="EV3" id="o3b-ta-oRa"/>
+                            </imageView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="seH-wq-xd8">
-                                <rect key="frame" x="113" y="133" width="92" height="32"/>
+                                <rect key="frame" x="113" y="190" width="92" height="32"/>
                                 <buttonCell key="cell" type="push" title="Connect" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MNt-uu-ttd">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -810,8 +818,10 @@
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="seH-wq-xd8" firstAttribute="centerY" secondItem="VjD-8M-RWo" secondAttribute="centerY" id="9mS-Ly-8cE"/>
-                            <constraint firstItem="seH-wq-xd8" firstAttribute="centerX" secondItem="VjD-8M-RWo" secondAttribute="centerX" id="xa8-DG-VSO"/>
+                            <constraint firstItem="seH-wq-xd8" firstAttribute="top" secondItem="oaf-y1-xDY" secondAttribute="bottom" constant="8" id="2oa-zd-FsU"/>
+                            <constraint firstItem="seH-wq-xd8" firstAttribute="centerX" secondItem="VjD-8M-RWo" secondAttribute="centerX" id="LY1-3t-VTW"/>
+                            <constraint firstItem="oaf-y1-xDY" firstAttribute="centerX" secondItem="VjD-8M-RWo" secondAttribute="centerX" id="ZtA-G2-dfA"/>
+                            <constraint firstItem="oaf-y1-xDY" firstAttribute="top" secondItem="VjD-8M-RWo" secondAttribute="top" constant="8" id="l0C-6t-VJ4"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -881,6 +891,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="EV3" width="43" height="66"/>
         <image name="NSActionTemplate" width="14" height="14"/>
         <image name="NSAddTemplate" width="11" height="11"/>
         <image name="NSRemoveTemplate" width="11" height="11"/>
