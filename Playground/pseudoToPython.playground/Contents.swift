@@ -1,4 +1,12 @@
-//: Playground - noun: a place where people can play
+// 
+//
+// pseudoToPython.playground
+// Cards
+//
+// Created by Peter Michael Reichstein Rasmussen on 30/03/2017
+// Copyright © 2017 NoobLabs. All rights reserved.
+//
+
 
 import UIKit
 
@@ -85,11 +93,13 @@ func convertToPython(code: String) -> String {
     var rest    :  String
     var split   : [String]
     
+    //Removing whitespace/newlines before and after code
     var trimmedCode = code.trimmingCharacters(in: .whitespacesAndNewlines)
     var res = ""
     
     
     while !(trimmedCode.isEmpty) {
+        //Finding first occurence of ':' to separate code into the first occuring keyword and the remainder
         split = splitAtFirstOccurence(str: trimmedCode, separator: ":")
         
         keyword = split[0]
