@@ -9,10 +9,14 @@
 import Cocoa
 
 class WindowController: NSWindowController {
+//    Outlets
     @IBOutlet weak var runOutlet: NSButton!
     @IBOutlet weak var statusOutlet: NSToolbarItem!
     @IBOutlet weak var statusTextOutlet: NSTextFieldCell!
     @IBOutlet weak var statusTextFieldOutlet: NSTextField!
+    
+//    Variables
+
     
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -35,6 +39,10 @@ class WindowController: NSWindowController {
         
 //        runOutlet.isEnabled = true //Enable button again
         runOutlet.image = #imageLiteral(resourceName: "Run")
+    }
+    
+    func runButtonIsEnabled(enable: Bool) {
+        runOutlet.isEnabled = enable
     }
 
 
