@@ -10,10 +10,14 @@ import Cocoa
 
 class ConfigureViewController: NSViewController {
 //    Outlets
+    @IBOutlet weak var presetImageOutlet: NSImageView!
     @IBOutlet weak var presetOutlet: NSPopUpButton!
     @IBOutlet weak var drivingMotorsOutlet: NSPopUpButton!
     @IBOutlet weak var rotationMMOutlet: NSTextField!
-    @IBOutlet weak var driveRotationOutlet: NSButton!
+    @IBOutlet weak var driveOneRotationOutlet: NSButton!
+    @IBOutlet weak var turnDegreesOutlet: NSTextField!
+    @IBOutlet weak var turnOneRotationOutlet: NSButton!
+
     
 //    Variables
     var isConnected = false
@@ -40,11 +44,28 @@ class ConfigureViewController: NSViewController {
             print("Berta is selected")
             drivingMotorsOutlet.selectItem(withTitle: "B & C")
             rotationMMOutlet.stringValue = "300"
+            turnDegreesOutlet.stringValue = "170"
+            presetImageOutlet.image = #imageLiteral(resourceName: "Presets_Berta")
         case "Neutral":
             print("Nautral is selected")
             drivingMotorsOutlet.selectItem(withTitle: "B & C")
             rotationMMOutlet.stringValue = "100"
+            turnDegreesOutlet.stringValue = "160"
+            presetImageOutlet.image = #imageLiteral(resourceName: "Presets_Neutral")
+        case "Pepperoni":
+            print("Nautral is selected")
+            drivingMotorsOutlet.selectItem(withTitle: "B & C")
+            rotationMMOutlet.stringValue = "109"
+            turnDegreesOutlet.stringValue = "153"
+            presetImageOutlet.image = #imageLiteral(resourceName: "Presets_Pepperoni")
+        case "Beethoven":
+            print("Nautral is selected")
+            drivingMotorsOutlet.selectItem(withTitle: "B & C")
+            rotationMMOutlet.stringValue = "66"
+            turnDegreesOutlet.stringValue = "164"
+            presetImageOutlet.image = #imageLiteral(resourceName: "Presets_Beethoven")
         default:
+            print("The selected preset is not fully configured")
             break
         }
     }
@@ -53,11 +74,13 @@ class ConfigureViewController: NSViewController {
     func connectionEnablesInteraction() { // Sets up the UI for wether or not a connection is established
          if isConnected == true {
             print("Connection is OK")
-            driveRotationOutlet.isEnabled = true
+            driveOneRotationOutlet.isEnabled = true
+            turnOneRotationOutlet.isEnabled = true
 //            WindowController.runButtonIsEnabled(enable: true)
          } else {
             print("Connection is lost")
-            driveRotationOutlet.isEnabled = false
+            driveOneRotationOutlet.isEnabled = false
+            turnOneRotationOutlet.isEnabled = false
         }
     }
     
