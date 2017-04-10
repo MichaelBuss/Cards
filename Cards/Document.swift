@@ -10,6 +10,8 @@ import Cocoa
 
 class Document: NSPersistentDocument {
 
+    var content:String = ""
+    
     override init() {
         super.init()
         // Add your subclass-specific initialization here.
@@ -24,6 +26,10 @@ class Document: NSPersistentDocument {
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
         let windowController = storyboard.instantiateController(withIdentifier: "Document Window Controller") as! NSWindowController
         self.addWindowController(windowController)
+    }
+    
+    override func read(from: URL, ofType typeName: String) throws {
+        content = String(describing: URL.self)
     }
 
 }
