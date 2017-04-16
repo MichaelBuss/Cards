@@ -10,9 +10,13 @@ import Cocoa
 
 class ViewController: NSViewController {
     @IBOutlet var textViewOutlet: NSTextView!
+    let document = Document()
 
+    
     override func viewDidLoad() {
         // Do any additional setup after loading the view.
+        textViewOutlet.textContainerInset = NSSize(width: 5, height: 5)
+
     }
 
     override var representedObject: Any? {

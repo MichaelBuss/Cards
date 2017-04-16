@@ -12,9 +12,7 @@ class TextView: NSTextView {
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-        self.textContainerInset = NSSize(width: 5, height: 5)
-        
         // Drawing code here.
     }
-    
+
 }

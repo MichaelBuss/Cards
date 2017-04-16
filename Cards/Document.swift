@@ -8,19 +8,18 @@
 
 import Cocoa
 
-class Document: NSPersistentDocument {
-
-    var content:String = ""
+class Document: NSDocument {
+    var content:String = "jsbdhjgbshjdbghjdsbg"
     
     override init() {
         super.init()
         // Add your subclass-specific initialization here.
     }
-
+    
     override class func autosavesInPlace() -> Bool {
         return true
     }
-
+    
     override func makeWindowControllers() {
         // Returns the Storyboard that contains your Document window.
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
@@ -28,8 +27,13 @@ class Document: NSPersistentDocument {
         self.addWindowController(windowController)
     }
     
-    override func read(from: URL, ofType typeName: String) throws {
-        content = String(describing: URL.self)
+    override func read(from url: URL, ofType typeName: String) throws {
+        content = try String(contentsOf: url, encoding: String.Encoding.utf8)
+    }
+    
+    override func write(to url: URL, ofType typeName: String) throws {
+        try content.write(to: url, atomically: true, encoding: String.Encoding.utf8)
+//        try textField.string?.write(to: url, atomically: true, encoding: String.Encoding.utf8)
     }
 
 }
