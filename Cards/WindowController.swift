@@ -16,6 +16,10 @@ class WindowController: NSWindowController {
     @IBOutlet weak var statusTextFieldOutlet: NSTextField!
     
 //    Variables
+    
+//    Instances
+    let windowModel = WindowModel()
+    
 
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -29,12 +33,8 @@ class WindowController: NSWindowController {
         //When the run button is pressed
 //        runOutlet.isEnabled = false //Disable button while code is running
         runOutlet.image = #imageLiteral(resourceName: "Stop")
+        windowModel.runPython()
         
-        let path = "/usr/bin/env" //( Path
-        let arguments = [Bundle.main.path(forResource: "Hello", ofType: "py")]
-        
-        let task = Process.launchedProcess(launchPath: path, arguments: arguments as! [String])
-        task.waitUntilExit()
         
 //        runOutlet.isEnabled = true //Enable button again
         runOutlet.image = #imageLiteral(resourceName: "Run")

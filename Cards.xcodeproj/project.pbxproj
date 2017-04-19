@@ -12,6 +12,7 @@
 		4C4F43F31E8C2157007641A8 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4F43F21E8C2157007641A8 /* TextView.swift */; };
 		4C5680261EA62AE400465500 /* sshpass in Resources */ = {isa = PBXBuildFile; fileRef = 4C5680251EA62AE400465500 /* sshpass */; };
 		4C5680281EA62BE700465500 /* ConfigureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5680271EA62BE700465500 /* ConfigureModel.swift */; };
+		4C56802A1EA787DB00465500 /* WindowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5680291EA787DB00465500 /* WindowModel.swift */; };
 		4C6798AB1E7E9DB300B80CD2 /* ConfigureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6798AA1E7E9DB300B80CD2 /* ConfigureViewController.swift */; };
 		4C6798AD1E7EA60300B80CD2 /* Connect.sh in Resources */ = {isa = PBXBuildFile; fileRef = 4C6798AC1E7EA46400B80CD2 /* Connect.sh */; };
 		4CB174981E79344E000D333D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB174971E79344E000D333D /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 		4C4F43F21E8C2157007641A8 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		4C5680251EA62AE400465500 /* sshpass */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = sshpass; sourceTree = "<group>"; };
 		4C5680271EA62BE700465500 /* ConfigureModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConfigureModel.swift; path = ../ConfigureModel.swift; sourceTree = "<group>"; };
+		4C5680291EA787DB00465500 /* WindowModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WindowModel.swift; path = ../WindowModel.swift; sourceTree = "<group>"; };
 		4C6798AA1E7E9DB300B80CD2 /* ConfigureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigureViewController.swift; sourceTree = "<group>"; };
 		4C6798AC1E7EA46400B80CD2 /* Connect.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Connect.sh; sourceTree = "<group>"; };
 		4CB174941E79344E000D333D /* Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +76,7 @@
 				4CB174971E79344E000D333D /* AppDelegate.swift */,
 				4C4F43F21E8C2157007641A8 /* TextView.swift */,
 				4C1D65C41E7D9D6B009F04B8 /* WindowController.swift */,
+				4C5680291EA787DB00465500 /* WindowModel.swift */,
 				4CB174991E79344E000D333D /* ViewController.swift */,
 				4C6798AA1E7E9DB300B80CD2 /* ConfigureViewController.swift */,
 				4C5680271EA62BE700465500 /* ConfigureModel.swift */,
@@ -169,6 +172,7 @@
 				4C4F43F31E8C2157007641A8 /* TextView.swift in Sources */,
 				4CB174981E79344E000D333D /* AppDelegate.swift in Sources */,
 				4CB1749C1E79344E000D333D /* Document.swift in Sources */,
+				4C56802A1EA787DB00465500 /* WindowModel.swift in Sources */,
 				4C5680281EA62BE700465500 /* ConfigureModel.swift in Sources */,
 				4C6798AB1E7E9DB300B80CD2 /* ConfigureViewController.swift in Sources */,
 			);
