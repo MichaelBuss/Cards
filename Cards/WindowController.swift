@@ -17,7 +17,6 @@ class WindowController: NSWindowController {
     
 //    Variables
 
-    
     override func windowDidLoad() {
         super.windowDidLoad()
         statusTextFieldOutlet.isSelectable = false

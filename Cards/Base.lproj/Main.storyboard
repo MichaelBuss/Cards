@@ -926,14 +926,14 @@
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="Presets_Beethoven" id="31h-5q-Nlq"/>
                                     </imageView>
                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qRg-Ob-7Ov">
-                                        <rect key="frame" x="219" y="142" width="99" height="26"/>
+                                        <rect key="frame" x="219" y="142" width="102" height="26"/>
                                         <popUpButtonCell key="cell" type="push" title="Neutral" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="xjj-La-U1j" id="Owb-SJ-cQX">
                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="menu"/>
                                             <menu key="menu" id="H2N-bx-XT8">
                                                 <items>
                                                     <menuItem title="Berta" id="EBD-Eg-buL"/>
-                                                    <menuItem title="Bethoven" id="Htf-y8-6A9"/>
+                                                    <menuItem title="Beethoven" id="Htf-y8-6A9"/>
                                                     <menuItem title="Pepperoni" id="jLw-8Z-bEw"/>
                                                     <menuItem title="Neutral" state="on" id="xjj-La-U1j"/>
                                                 </items>

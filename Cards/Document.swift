@@ -9,7 +9,9 @@
 import Cocoa
 
 class Document: NSDocument {
-    var content:String = "jsbdhjgbshjdbghjdsbg"
+    var content:String = "Davs"
+
+    
     
     override init() {
         super.init()
@@ -19,6 +21,7 @@ class Document: NSDocument {
     override class func autosavesInPlace() -> Bool {
         return true
     }
+    
     
     override func makeWindowControllers() {
         // Returns the Storyboard that contains your Document window.
@@ -31,9 +34,11 @@ class Document: NSDocument {
         content = try String(contentsOf: url, encoding: String.Encoding.utf8)
     }
     
-    override func write(to url: URL, ofType typeName: String) throws {
-        try content.write(to: url, atomically: true, encoding: String.Encoding.utf8)
-//        try textField.string?.write(to: url, atomically: true, encoding: String.Encoding.utf8)
+    func write(save text: String) throws {
+        //try content.write(to: url, atomically: true, encoding: String.Encoding.utf8)
+        try text.write(to: fileURL!, atomically: true, encoding: String.Encoding.utf8)
+        
     }
+    
 
 }
