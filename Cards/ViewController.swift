@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NSTextStorageDelegate {
     @IBOutlet var textViewOutlet: NSTextView!
     let document = Document()
 
@@ -16,6 +16,7 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         // Do any additional setup after loading the view.
         textViewOutlet.textContainerInset = NSSize(width: 5, height: 5)
+        textViewOutlet.textStorage?.delegate = self
 
     }
 
@@ -23,6 +24,11 @@ class ViewController: NSViewController {
         didSet {
         // Update the view, if already loaded.
         }
+    }
+    
+    func textStorage(_ textStorage: NSTextStorage, willProcessEditing editedMask: NSTextStorageEditActions, range editedRange: NSRange, changeInLength delta: Int) {
+        let h = Highlighter(str: textStorage.string, ats: textStorage)
+        let _ = h.getHighlightedString()
     }
 
 
