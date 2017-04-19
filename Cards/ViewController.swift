@@ -16,6 +16,10 @@ class ViewController: NSViewController, NSTextStorageDelegate {
     override func viewDidLoad() {
         // Do any additional setup after loading the view.
         textViewOutlet.textContainerInset = NSSize(width: 5, height: 5)
+        textViewOutlet.string = document.content
+        
+        
+        
         textViewOutlet.textStorage?.delegate = self
 
     }
