@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AC500091EA77B43006687E2 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC500061EA77B43006687E2 /* Lexer.swift */; };
+		3AC5000A1EA77B43006687E2 /* Highlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC500071EA77B43006687E2 /* Highlighter.swift */; };
+		3AC5000C1EA77B88006687E2 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC5000B1EA77B88006687E2 /* Token.swift */; };
 		4C1D65C51E7D9D6B009F04B8 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D65C41E7D9D6B009F04B8 /* WindowController.swift */; };
 		4C1D65C71E7DD286009F04B8 /* Hello.py in Resources */ = {isa = PBXBuildFile; fileRef = 4C1D65C61E7DD286009F04B8 /* Hello.py */; };
 		4C4F43F31E8C2157007641A8 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4F43F21E8C2157007641A8 /* TextView.swift */; };
@@ -24,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3AC500061EA77B43006687E2 /* Lexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
+		3AC500071EA77B43006687E2 /* Highlighter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Highlighter.swift; sourceTree = "<group>"; };
+		3AC500081EA77B43006687E2 /* HighligterPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = HighligterPlayground.playground; sourceTree = "<group>"; };
+		3AC5000B1EA77B88006687E2 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		4C1D65C41E7D9D6B009F04B8 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		4C1D65C61E7DD286009F04B8 /* Hello.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Hello.py; sourceTree = "<group>"; };
 		4C4F43F21E8C2157007641A8 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
@@ -53,9 +60,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AC500051EA77B2B006687E2 /* Highlighting */ = {
+			isa = PBXGroup;
+			children = (
+				3AC5000B1EA77B88006687E2 /* Token.swift */,
+				3AC500061EA77B43006687E2 /* Lexer.swift */,
+				3AC500071EA77B43006687E2 /* Highlighter.swift */,
+				3AC500081EA77B43006687E2 /* HighligterPlayground.playground */,
+			);
+			name = Highlighting;
+			sourceTree = "<group>";
+		};
 		4CB1748B1E79344E000D333D = {
 			isa = PBXGroup;
 			children = (
+				3AC500051EA77B2B006687E2 /* Highlighting */,
 				4CCBAA011E8E2C6800D45B9B /* Playground */,
 				4CB174961E79344E000D333D /* Cards */,
 				4CB174951E79344E000D333D /* Products */,
@@ -167,8 +186,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AC5000C1EA77B88006687E2 /* Token.swift in Sources */,
 				4C1D65C51E7D9D6B009F04B8 /* WindowController.swift in Sources */,
+				3AC500091EA77B43006687E2 /* Lexer.swift in Sources */,
 				4CB1749A1E79344E000D333D /* ViewController.swift in Sources */,
+				3AC5000A1EA77B43006687E2 /* Highlighter.swift in Sources */,
 				4C4F43F31E8C2157007641A8 /* TextView.swift in Sources */,
 				4CB174981E79344E000D333D /* AppDelegate.swift in Sources */,
 				4CB1749C1E79344E000D333D /* Document.swift in Sources */,
