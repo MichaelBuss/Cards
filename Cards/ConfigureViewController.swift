@@ -18,7 +18,7 @@ class ConfigureViewController: NSViewController {
     @IBOutlet weak var turnDegreesOutlet: NSTextField!
     @IBOutlet weak var turnOneRotationOutlet: NSButton!
 
-    private var configure = ConfigureModel()
+    private var configureModel = ConfigureModel()
     
 //    Variables
     var isConnected = false
@@ -26,7 +26,7 @@ class ConfigureViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        configure.choosePreset(configure.chosenPreset)
+        configureModel.choosePreset(configureModel.chosenPreset)
         updatePreset()
         connectionEnablesInteraction()
     }
@@ -42,16 +42,16 @@ class ConfigureViewController: NSViewController {
     
     @IBAction func PresetAction(_ sender: Any) {
         if let selected = sender as? NSPopUpButton {
-            configure.choosePreset(selected.titleOfSelectedItem!)
+            configureModel.choosePreset(selected.titleOfSelectedItem!)
             updatePreset()
         }
     }
     
     func updatePreset() {
-        drivingMotorsOutlet.selectItem(withTitle: configure.drivingMotors)
-        rotationMMOutlet.stringValue = configure.rotationMM
-        turnDegreesOutlet.stringValue = configure.turnDegrees
-        presetImageOutlet.image = configure.presetImage
+        drivingMotorsOutlet.selectItem(withTitle: configureModel.drivingMotors)
+        rotationMMOutlet.stringValue = configureModel.rotationMM
+        turnDegreesOutlet.stringValue = configureModel.turnDegrees
+        presetImageOutlet.image = configureModel.presetImage
     }
     
     func connectionEnablesInteraction() { // Sets up the UI for wether or not a connection is established

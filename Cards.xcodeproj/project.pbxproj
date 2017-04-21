@@ -16,8 +16,11 @@
 		4C5680261EA62AE400465500 /* sshpass in Resources */ = {isa = PBXBuildFile; fileRef = 4C5680251EA62AE400465500 /* sshpass */; };
 		4C5680281EA62BE700465500 /* ConfigureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5680271EA62BE700465500 /* ConfigureModel.swift */; };
 		4C56802A1EA787DB00465500 /* WindowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5680291EA787DB00465500 /* WindowModel.swift */; };
+		4C56802C1EA7946F00465500 /* SnippetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C56802B1EA7946F00465500 /* SnippetViewController.swift */; };
 		4C6798AB1E7E9DB300B80CD2 /* ConfigureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6798AA1E7E9DB300B80CD2 /* ConfigureViewController.swift */; };
 		4C6798AD1E7EA60300B80CD2 /* Connect.sh in Resources */ = {isa = PBXBuildFile; fileRef = 4C6798AC1E7EA46400B80CD2 /* Connect.sh */; };
+		4CAB2F961EA7A51200D02696 /* SnippetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAB2F951EA7A51200D02696 /* SnippetCell.swift */; };
+		4CAB2F981EA8F31300D02696 /* SnippetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAB2F971EA8F31300D02696 /* SnippetModel.swift */; };
 		4CB174981E79344E000D333D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB174971E79344E000D333D /* AppDelegate.swift */; };
 		4CB1749A1E79344E000D333D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB174991E79344E000D333D /* ViewController.swift */; };
 		4CB1749C1E79344E000D333D /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB1749B1E79344E000D333D /* Document.swift */; };
@@ -37,8 +40,11 @@
 		4C5680251EA62AE400465500 /* sshpass */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = sshpass; sourceTree = "<group>"; };
 		4C5680271EA62BE700465500 /* ConfigureModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConfigureModel.swift; path = ../ConfigureModel.swift; sourceTree = "<group>"; };
 		4C5680291EA787DB00465500 /* WindowModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WindowModel.swift; path = ../WindowModel.swift; sourceTree = "<group>"; };
+		4C56802B1EA7946F00465500 /* SnippetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnippetViewController.swift; sourceTree = "<group>"; };
 		4C6798AA1E7E9DB300B80CD2 /* ConfigureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigureViewController.swift; sourceTree = "<group>"; };
 		4C6798AC1E7EA46400B80CD2 /* Connect.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Connect.sh; sourceTree = "<group>"; };
+		4CAB2F951EA7A51200D02696 /* SnippetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnippetCell.swift; sourceTree = "<group>"; };
+		4CAB2F971EA8F31300D02696 /* SnippetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnippetModel.swift; sourceTree = "<group>"; };
 		4CB174941E79344E000D333D /* Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB174971E79344E000D333D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CB174991E79344E000D333D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +77,25 @@
 			name = Highlighting;
 			sourceTree = "<group>";
 		};
+		4CAB2F991EA8F32700D02696 /* Snippets */ = {
+			isa = PBXGroup;
+			children = (
+				4C56802B1EA7946F00465500 /* SnippetViewController.swift */,
+				4CAB2F971EA8F31300D02696 /* SnippetModel.swift */,
+				4CAB2F951EA7A51200D02696 /* SnippetCell.swift */,
+			);
+			name = Snippets;
+			sourceTree = "<group>";
+		};
+		4CAB2F9A1EA8F33600D02696 /* Configure */ = {
+			isa = PBXGroup;
+			children = (
+				4C6798AA1E7E9DB300B80CD2 /* ConfigureViewController.swift */,
+				4C5680271EA62BE700465500 /* ConfigureModel.swift */,
+			);
+			name = Configure;
+			sourceTree = "<group>";
+		};
 		4CB1748B1E79344E000D333D = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +122,8 @@
 				4C1D65C41E7D9D6B009F04B8 /* WindowController.swift */,
 				4C5680291EA787DB00465500 /* WindowModel.swift */,
 				4CB174991E79344E000D333D /* ViewController.swift */,
-				4C6798AA1E7E9DB300B80CD2 /* ConfigureViewController.swift */,
-				4C5680271EA62BE700465500 /* ConfigureModel.swift */,
+				4CAB2F9A1EA8F33600D02696 /* Configure */,
+				4CAB2F991EA8F32700D02696 /* Snippets */,
 				4CB1749B1E79344E000D333D /* Document.swift */,
 				4CB174A01E79344E000D333D /* Assets.xcassets */,
 				4CB174A21E79344E000D333D /* Main.storyboard */,
@@ -186,14 +211,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C56802C1EA7946F00465500 /* SnippetViewController.swift in Sources */,
 				3AC5000C1EA77B88006687E2 /* Token.swift in Sources */,
 				4C1D65C51E7D9D6B009F04B8 /* WindowController.swift in Sources */,
+				4CAB2F981EA8F31300D02696 /* SnippetModel.swift in Sources */,
 				3AC500091EA77B43006687E2 /* Lexer.swift in Sources */,
 				4CB1749A1E79344E000D333D /* ViewController.swift in Sources */,
 				3AC5000A1EA77B43006687E2 /* Highlighter.swift in Sources */,
 				4C4F43F31E8C2157007641A8 /* TextView.swift in Sources */,
 				4CB174981E79344E000D333D /* AppDelegate.swift in Sources */,
 				4CB1749C1E79344E000D333D /* Document.swift in Sources */,
+				4CAB2F961EA7A51200D02696 /* SnippetCell.swift in Sources */,
 				4C56802A1EA787DB00465500 /* WindowModel.swift in Sources */,
 				4C5680281EA62BE700465500 /* ConfigureModel.swift in Sources */,
 				4C6798AB1E7E9DB300B80CD2 /* ConfigureViewController.swift in Sources */,
