@@ -43,7 +43,7 @@
 		4C56802B1EA7946F00465500 /* SnippetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnippetViewController.swift; sourceTree = "<group>"; };
 		4C6798AA1E7E9DB300B80CD2 /* ConfigureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigureViewController.swift; sourceTree = "<group>"; };
 		4C6798AC1E7EA46400B80CD2 /* Connect.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Connect.sh; sourceTree = "<group>"; };
-		4CA90A601EAA172200D63C52 /* SnippetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnippetModel.swift; sourceTree = "<group>"; };
+		4CA90A601EAA172200D63C52 /* SnippetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnippetModel.swift; path = ../SnippetModel.swift; sourceTree = "<group>"; };
 		4CAB2F951EA7A51200D02696 /* SnippetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnippetCell.swift; sourceTree = "<group>"; };
 		4CB174941E79344E000D333D /* Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB174971E79344E000D333D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				4C56802B1EA7946F00465500 /* SnippetViewController.swift */,
+				4CA90A601EAA172200D63C52 /* SnippetModel.swift */,
 				4CAB2F951EA7A51200D02696 /* SnippetCell.swift */,
 			);
 			name = Snippets;
@@ -98,7 +99,6 @@
 		4CB1748B1E79344E000D333D = {
 			isa = PBXGroup;
 			children = (
-				4CA90A601EAA172200D63C52 /* SnippetModel.swift */,
 				3AC500051EA77B2B006687E2 /* Highlighting */,
 				4CCBAA011E8E2C6800D45B9B /* Playground */,
 				4CB174961E79344E000D333D /* Cards */,

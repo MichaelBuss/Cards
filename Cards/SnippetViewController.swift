@@ -11,15 +11,33 @@ import Cocoa
 class SnippetViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
 
     @IBOutlet weak var snippetTableViewOutlet: NSTableView!
-        
-    var cellText = ["Frem","Tilbage","Drej", "Enkelt Motor", "Gentag", "Gør hvis"]
+var cellText = [
+        "Frem",
+        "Tilbage",
+        "Drej",
+        "Brems",
+        "Enkelt Stor Motor",
+        "Enkelt Lille Motor",
+        "Højttaler",
+        "Ny Funktion",
+        "Brug Funktion",
+        "Gentag",
+        "Gør Hvis",
+        "Husk"]
+    
     var cellImages = [
         #imageLiteral(resourceName: "Snippets_Arrow Forward"),
         #imageLiteral(resourceName: "Snippets_Arrow Backward"),
         #imageLiteral(resourceName: "Snippets_Arrow Turn Sharp"),
-        #imageLiteral(resourceName: "Snippets_Motor"),
+        #imageLiteral(resourceName: "Snippets_Break"),
+        #imageLiteral(resourceName: "Snippets_Motor Large"),
+        #imageLiteral(resourceName: "Snippets_Motor Small"),
+        #imageLiteral(resourceName: "Snippets_Speaker"),
+        #imageLiteral(resourceName: "Snippets_Function New"),
+        #imageLiteral(resourceName: "Snippets_Function Use"),
         #imageLiteral(resourceName: "Snippets_Loop"),
-        #imageLiteral(resourceName: "Snippets_Do If")
+        #imageLiteral(resourceName: "Snippets_Do If"),
+        #imageLiteral(resourceName: "Snippets_Remember")
     ]
     
     override func viewDidLoad() {
