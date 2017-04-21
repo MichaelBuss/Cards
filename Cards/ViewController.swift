@@ -17,9 +17,6 @@ class ViewController: NSViewController, NSTextStorageDelegate {
         // Do any additional setup after loading the view.
         textViewOutlet.textContainerInset = NSSize(width: 5, height: 5)
         textViewOutlet.string = document.content
-        
-        
-        
         textViewOutlet.textStorage?.delegate = self
 
     }
@@ -35,6 +32,9 @@ class ViewController: NSViewController, NSTextStorageDelegate {
         let _ = h.getHighlightedString()
     }
 
+    func insertSnippet(snippet: String){
+        textViewOutlet.insertText(snippet, replacementRange: NSMakeRange(4, 0))
+    }
 
 }
 

@@ -11,9 +11,7 @@ import Cocoa
 class SnippetViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
 
     @IBOutlet weak var snippetTableViewOutlet: NSTableView!
-    
-    let snippetModel = SnippetModel()
-    
+        
     var cellText = ["Frem","Tilbage","Drej", "Enkelt Motor", "Gentag", "Gør hvis"]
     var cellImages = [
         #imageLiteral(resourceName: "Snippets_Arrow Forward"),
@@ -34,16 +32,12 @@ class SnippetViewController: NSViewController, NSTableViewDataSource, NSTableVie
     }
 
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        if let cell = tableView.make(withIdentifier: "cell", owner: nil) as? NSTableCellView {
-            
-            if cellText.count >= cellImages.count{ // Checks if there are enough snippets in the array to match images
-            cell.textField?.stringValue = cellText[row]
-            } else {cell.textField?.stringValue = "Missing description"}
-            
-            if cellImages.count >= cellText.count { // Checks if there are enough images in the array to match snippets
-            cell.imageView?.image = cellImages[row]
-            } else {cell.imageView?.image = #imageLiteral(resourceName: "Snippets_Missing")}
-            
+        if let cell = tableView.make(withIdentifier: "cell", owner: nil) as? SnippetCell {
+            if cellText.count == cellImages.count{ // Checks for equal amounts of images and texts
+                cell.cellSetup(image: cellImages[row], title: cellText[row])
+            } else {
+                cell.cellSetup(image: #imageLiteral(resourceName: "Snippets_Missing"), title: "Missing description")
+            }
             return cell
         }
         return nil
