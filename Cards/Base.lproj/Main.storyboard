@@ -657,6 +657,19 @@
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Vds-b1-aqm">
+            <objects>
+                <viewController id="Zbt-sN-Ijk" sceneMemberID="viewController">
+                    <view key="view" id="oob-fk-Sym">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="ZJm-L1-zhB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-458" y="760"/>
+        </scene>
         <!--Snippet View Controller-->
         <scene sceneID="Huk-E4-qSd">
             <objects>
@@ -755,7 +768,7 @@
                 </viewController>
                 <customObject id="aZc-NN-Wmv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-519" y="316"/>
+            <point key="canvasLocation" x="505" y="755"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -766,7 +779,7 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <value key="minSize" type="size" width="300" height="270"/>
+                        <value key="minSize" type="size" width="360" height="270"/>
                         <toolbar key="toolbar" implicitIdentifier="0F3D09B7-8ADF-4201-88C0-B3CD801E86EA" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="sAw-Ee-VkL">
                             <allowedToolbarItems>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="Ydc-AA-vl1"/>
@@ -781,6 +794,8 @@
                                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="FJK-rR-ojM">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent">l</string>
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                         </buttonCell>
                                     </button>
                                     <connections>
@@ -814,10 +829,30 @@
                                         <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSActionTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="n46-Ub-Y3j">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent">,</string>
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                                         </buttonCell>
                                     </button>
                                     <connections>
                                         <segue destination="tj4-E2-LXb" kind="sheet" id="7YW-Nt-dUL"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="6BF79E9F-2635-429C-9097-B6F576268D22" label="Help" paletteLabel="Help" image="NSInfo" id="sBG-hd-cHR">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="40" height="25"/>
+                                    <size key="maxSize" width="40" height="25"/>
+                                    <button key="view" verticalHuggingPriority="750" id="9ho-eI-Fsf">
+                                        <rect key="frame" x="0.0" y="14" width="40" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSInfo" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="erp-kY-Sp4">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent">,</string>
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                        </buttonCell>
+                                    </button>
+                                    <connections>
+                                        <segue destination="Zbt-sN-Ijk" kind="modal" id="DHj-xg-nCX"/>
                                     </connections>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="D294BD1D-77E7-4121-BDAF-AA8618C7A65E" label="Share" paletteLabel="Share" image="NSShareTemplate" id="cfs-ih-lji">
@@ -850,6 +885,7 @@
                             </allowedToolbarItems>
                             <defaultToolbarItems>
                                 <toolbarItem reference="bG3-s6-c8E"/>
+                                <toolbarItem reference="sBG-hd-cHR"/>
                                 <toolbarItem reference="FKK-2W-Clp"/>
                                 <toolbarItem reference="iUg-wM-bvI"/>
                                 <toolbarItem reference="FKK-2W-Clp"/>
@@ -1221,12 +1257,13 @@
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="98" y="785"/>
+            <point key="canvasLocation" x="74" y="785"/>
         </scene>
     </scenes>
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>
         <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSInfo" width="32" height="32"/>
         <image name="NSShareTemplate" width="11" height="16"/>
         <image name="Overview" width="204" height="302"/>
         <image name="Presets_Beethoven" width="168" height="168"/>
