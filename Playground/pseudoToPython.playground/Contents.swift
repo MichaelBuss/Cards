@@ -86,6 +86,18 @@ func ifArgument(condition: String) -> String {
     return condition
 }
 
+//Convert for/while argument to Python
+func forStatement(condition: String) -> String {
+    //To be implemented
+    return condition
+}
+
+//Convert sound command to Python
+func forStatement(condition: String) -> String {
+    //To be implemented
+    return condition
+}
+
 
 //Converts pseudocode to Python
 func convertToPython(code: String) -> String {
@@ -94,7 +106,7 @@ func convertToPython(code: String) -> String {
     var split   : [String]
     
     //Removing whitespace/newlines before and after code
-    var trimmedCode = code.trimmingCharacters(in: .whitespacesAndNewlines)
+    var trimmedCode = code.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
     var res = ""
     
     
@@ -106,7 +118,7 @@ func convertToPython(code: String) -> String {
         rest = split[1]
         
         switch keyword {
-        case "Drej":
+        case "drej":
             //Splitting string at ':' into the argument for the turn and the remaining code
             split = splitAtFirstOccurence(str: rest, separator: "\n")
             
@@ -116,12 +128,12 @@ func convertToPython(code: String) -> String {
             //Next round of the loop will use the remaining code
             trimmedCode = split[1].trimmingCharacters(in: .whitespacesAndNewlines)
         
-        case "Hvis":
+        case "hvis":
             //Splitting string at '(' into the condition and the remaining code
             split = splitAtFirstOccurence(str: rest, separator: "(")
             
             //Adding the if-statemnt corresponding to the condition
-            res += "if " + ifArgument(condition: split[0]) + ":\n"
+            res += "if " + ifArgument(condition: split[0]).trimmingCharacters(in: .whitespacesAndNewlines) + ":\n"
             
             //Splitting the remaining code into the codesegment that the if-statement decides and the remaining code
             do {
@@ -134,6 +146,112 @@ func convertToPython(code: String) -> String {
             res += indent(code: convertToPython(code: split[0]))
             
             //Next round of the loop will use the remaining code
+            trimmedCode = split[1].trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        case "ellers hvis":
+            //Splitting string at '(' into the condition and the remaining code
+            split = splitAtFirstOccurence(str: rest, separator: "(")
+            
+            //Adding the if-statemnt corresponding to the condition
+            res += "elif " + ifArgument(condition: split[0]).trimmingCharacters(in: .whitespacesAndNewlines) + ":\n"
+            
+            //Splitting the remaining code into the codesegment that the if-statement decides and the remaining code
+            do {
+                try split = extractGroup(codeSnippet: "("+split[1])
+            } catch {
+                print("Bad formatting")
+            }
+            
+            //The code that the if-statement decides is converted to Python recursively and added
+            res += indent(code: convertToPython(code: split[0]))
+            
+            //Next round of the loop will use the remaining code
+            trimmedCode = split[1].trimmingCharacters(in: .whitespacesAndNewlines)
+            
+        case "ellers":
+            //Splitting string at '(' into the condition and the remaining code
+            split = splitAtFirstOccurence(str: rest, separator: "(")
+            
+            //Adding the if-statemnt corresponding to the condition
+            res += "else:\n"
+            
+            //Splitting the remaining code into the codesegment that the if-statement decides and the remaining code
+            do {
+                try split = extractGroup(codeSnippet: "("+split[1])
+            } catch {
+                print("Bad formatting")
+            }
+            
+            //The code that the if-statement decides is converted to Python recursively and added
+            res += indent(code: convertToPython(code: split[0]))
+            
+            //Next round of the loop will use the remaining code
+            trimmedCode = split[1].trimmingCharacters(in: .whitespacesAndNewlines)
+            
+        case "gentag":
+            //Splitting string at '(' into the condition and the remaining code
+            split = splitAtFirstOccurence(str: rest, separator: "(")
+            
+            //Adding the for-statemnt corresponding to the condition
+            res += forStatement(condition: split[0])
+            
+            //Splitting the remaining code into the codesegment that the if-statement decides and the remaining code
+            do {
+                try split = extractGroup(codeSnippet: "("+split[1])
+            } catch {
+                print("Bad formatting")
+            }
+            
+            //The code that the if-statement decides is converted to Python recursively and added
+            res += indent(code: convertToPython(code: split[0]))
+            
+            //Next round of the loop will use the remaining code
+            trimmedCode = split[1].trimmingCharacters(in: .whitespacesAndNewlines)
+
+        
+        case "sig":
+            //Splitting string at newline
+            split = splitAtFirstOccurence(str: rest, separator: "\n")
+            
+            res += soundCommand(argument: split[0])
+            
+            trimmedCode = split[1].trimmingCharacters(in: .whitespacesAndNewlines)
+            
+        case "drej":
+            //Splitting string at newline
+            split = splitAtFirstOccurence(str: rest, separator: "\n")
+            
+            res += turnCommand(argument: split[0])
+            
+            trimmedCode = split[1].trimmingCharacters(in: .whitespacesAndNewlines)
+            
+        case "brems":
+            res += stopCommand()
+            
+            trimmedCode = rest.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        case "tilbage":
+            //Splitting string at newline
+            split = splitAtFirstOccurence(str: rest, separator: "\n")
+            
+            res += backCommand(argument: split[0])
+            
+            trimmedCode = split[1].trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        case "frem":
+            //Splitting string at newline
+            split = splitAtFirstOccurence(str: rest, separator: "\n")
+            
+            res += forwardCommand(argument: split[0])
+            
+            trimmedCode = split[1].trimmingCharacters(in: .whitespacesAndNewlines)
+            
+        case "tilbage":
+            //Splitting string at newline
+            split = splitAtFirstOccurence(str: rest, separator: "\n")
+            
+            res += backCommand(argument: split[0])
+            
             trimmedCode = split[1].trimmingCharacters(in: .whitespacesAndNewlines)
             
         default:
