@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F43c" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F60a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="12062"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
         <capability name="the Touch Bar" message="Use a version of macOS with Touch Bar support." minToolsVersion="8.1" minSystemVersion="10.12.1" requiredIntegratedClassName="NSTouchBar"/>
@@ -657,18 +657,52 @@
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--View Controller-->
+        <!--Hjælp-->
         <scene sceneID="Vds-b1-aqm">
             <objects>
-                <viewController id="Zbt-sN-Ijk" sceneMemberID="viewController">
+                <viewController title="Hjælp" id="Zbt-sN-Ijk" customClass="HelpViewController" customModule="Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="oob-fk-Sym">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="255"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kk0-RE-gx9">
+                                <rect key="frame" x="-2" y="216" width="454" height="31"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Velkommen til Cards!" id="v7V-C1-vfi">
+                                    <font key="font" size="26" name=".AppleSystemUIFontLight"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dG3-r3-zfF">
+                                <rect key="frame" x="6" y="8" width="438" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="vIe-ef-h8s"/>
+                                </constraints>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="DdS-3s-3Qh">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Kk0-RE-gx9" firstAttribute="top" secondItem="oob-fk-Sym" secondAttribute="top" constant="8" id="4VB-ve-wvS"/>
+                            <constraint firstItem="dG3-r3-zfF" firstAttribute="top" secondItem="Kk0-RE-gx9" secondAttribute="bottom" constant="8" id="9Ar-ZW-GZL"/>
+                            <constraint firstAttribute="bottom" secondItem="dG3-r3-zfF" secondAttribute="bottom" constant="8" id="BSG-mw-CH5"/>
+                            <constraint firstItem="dG3-r3-zfF" firstAttribute="leading" secondItem="oob-fk-Sym" secondAttribute="leading" constant="8" id="Qow-gL-QDC"/>
+                            <constraint firstAttribute="trailing" secondItem="dG3-r3-zfF" secondAttribute="trailing" constant="8" id="WEr-uB-FCI"/>
+                            <constraint firstAttribute="trailing" secondItem="Kk0-RE-gx9" secondAttribute="trailing" id="hC2-oh-OKf"/>
+                            <constraint firstItem="Kk0-RE-gx9" firstAttribute="leading" secondItem="oob-fk-Sym" secondAttribute="leading" id="piW-00-9QU"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="helpTextOutlet" destination="dG3-r3-zfF" id="zKi-LN-aYN"/>
+                        <outlet property="helpTitleOutlet" destination="Kk0-RE-gx9" id="QoF-hg-XQy"/>
+                    </connections>
                 </viewController>
                 <customObject id="ZJm-L1-zhB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-458" y="760"/>
+            <point key="canvasLocation" x="-457" y="734"/>
         </scene>
         <!--Snippet View Controller-->
         <scene sceneID="Huk-E4-qSd">
@@ -1149,7 +1183,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0I-Rn-Fqn">
-                                        <rect key="frame" x="95.5" y="355" width="265" height="31"/>
+                                        <rect key="frame" x="95" y="355" width="265" height="31"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Set up your robot here" id="KLR-l0-ben">
                                             <font key="font" metaFont="system" size="26"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>

@@ -10,6 +10,7 @@
 		3AC500091EA77B43006687E2 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC500061EA77B43006687E2 /* Lexer.swift */; };
 		3AC5000A1EA77B43006687E2 /* Highlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC500071EA77B43006687E2 /* Highlighter.swift */; };
 		3AC5000C1EA77B88006687E2 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC5000B1EA77B88006687E2 /* Token.swift */; };
+		4C0809E81EAF83F000835258 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0809E71EAF83F000835258 /* HelpViewController.swift */; };
 		4C1D65C51E7D9D6B009F04B8 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D65C41E7D9D6B009F04B8 /* WindowController.swift */; };
 		4C1D65C71E7DD286009F04B8 /* Hello.py in Resources */ = {isa = PBXBuildFile; fileRef = 4C1D65C61E7DD286009F04B8 /* Hello.py */; };
 		4C4F43F31E8C2157007641A8 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4F43F21E8C2157007641A8 /* TextView.swift */; };
@@ -34,6 +35,7 @@
 		3AC500071EA77B43006687E2 /* Highlighter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Highlighter.swift; sourceTree = "<group>"; };
 		3AC500081EA77B43006687E2 /* HighligterPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = HighligterPlayground.playground; sourceTree = "<group>"; };
 		3AC5000B1EA77B88006687E2 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		4C0809E71EAF83F000835258 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpViewController.swift; path = ../HelpViewController.swift; sourceTree = "<group>"; };
 		4C1D65C41E7D9D6B009F04B8 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		4C1D65C61E7DD286009F04B8 /* Hello.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Hello.py; sourceTree = "<group>"; };
 		4C4F43F21E8C2157007641A8 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 				3AC500081EA77B43006687E2 /* HighligterPlayground.playground */,
 			);
 			name = Highlighting;
+			sourceTree = "<group>";
+		};
+		4C0809E91EAF841600835258 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				4C0809E71EAF83F000835258 /* HelpViewController.swift */,
+			);
+			name = Help;
 			sourceTree = "<group>";
 		};
 		4CAB2F991EA8F32700D02696 /* Snippets */ = {
@@ -123,6 +133,7 @@
 				4C5680291EA787DB00465500 /* WindowModel.swift */,
 				4CB174991E79344E000D333D /* ViewController.swift */,
 				4CAB2F9A1EA8F33600D02696 /* Configure */,
+				4C0809E91EAF841600835258 /* Help */,
 				4CAB2F991EA8F32700D02696 /* Snippets */,
 				4CB1749B1E79344E000D333D /* Document.swift */,
 				4CB174A01E79344E000D333D /* Assets.xcassets */,
@@ -215,6 +226,7 @@
 				3AC5000C1EA77B88006687E2 /* Token.swift in Sources */,
 				4C1D65C51E7D9D6B009F04B8 /* WindowController.swift in Sources */,
 				4CA90A611EAA172200D63C52 /* SnippetModel.swift in Sources */,
+				4C0809E81EAF83F000835258 /* HelpViewController.swift in Sources */,
 				3AC500091EA77B43006687E2 /* Lexer.swift in Sources */,
 				4CB1749A1E79344E000D333D /* ViewController.swift in Sources */,
 				3AC5000A1EA77B43006687E2 /* Highlighter.swift in Sources */,
