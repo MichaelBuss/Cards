@@ -871,14 +871,14 @@
                                         <segue destination="tj4-E2-LXb" kind="sheet" id="7YW-Nt-dUL"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="6BF79E9F-2635-429C-9097-B6F576268D22" label="Help" paletteLabel="Help" image="NSInfo" id="sBG-hd-cHR">
+                                <toolbarItem implicitItemIdentifier="6BF79E9F-2635-429C-9097-B6F576268D22" label="Help" paletteLabel="Help" image="Help" id="sBG-hd-cHR">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="40" height="25"/>
                                     <size key="maxSize" width="40" height="25"/>
                                     <button key="view" verticalHuggingPriority="750" id="9ho-eI-Fsf">
                                         <rect key="frame" x="0.0" y="14" width="40" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSInfo" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="erp-kY-Sp4">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="Help" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="erp-kY-Sp4">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                             <string key="keyEquivalent">,</string>
@@ -1295,9 +1295,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Help" width="19" height="19"/>
         <image name="NSActionTemplate" width="14" height="14"/>
         <image name="NSAddTemplate" width="11" height="11"/>
-        <image name="NSInfo" width="32" height="32"/>
         <image name="NSShareTemplate" width="11" height="16"/>
         <image name="Overview" width="204" height="302"/>
         <image name="Presets_Beethoven" width="168" height="168"/>
