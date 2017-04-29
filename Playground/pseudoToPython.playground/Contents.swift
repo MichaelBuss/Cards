@@ -334,7 +334,7 @@ func convertToPython(code: String) -> String {
                     trimmedCode = split[1].trimmingCharacters(in: .whitespacesAndNewlines)
                     
                     
-                case "sig":
+                case "højtaler":
                     //Splitting string at newline
                     split = splitAtFirstOccurence(str: rest, separator: "\n")
                     
@@ -453,8 +453,7 @@ func compile(code: String) -> String {
 
 
 //Test
-var code = "frem: 10 cm\nsig: Hello\n\nNy funktion: toWall (\n\tfrem:til kontakt\n \ttilbage: 5 cm\n)\n\nFunktion:toWall\nDrej: 90 grader til højre\n frem: til kontakt\n\nGentag: 3 gange(\n\tDrej: 40 grader til højre\n\tSig: Right\n\tDrej: 10 grader til venstre\n\tSig: Left\n)\n\nFrem: til kontakt\nHvis: Farve er rød (\n\tMotorA: 1 rotation frem\n)\nEllers hvis: farve er sort(\n\tMotorA: 3 rotationer tilbage\n)\nEllers: (\n\tmotorA: 4 rotationer frem\n)\n\ntilbage: 5 cm\nDrej: 90 grader til venstre\n\nGentag: til kontakt (\n\tHvis: Farve er rød (\n\t\tBrems\n\t)\n\tEllers: (\n\t\tFrem\n\t)\n)\n\nTilbage: 5 cm\nDrej: 40 grader til højre\nTilbage: 1 sekund\n\nFrem: til kontakt\n Tilbage: 5 cm\nDrej: 90 grader til venstre"
-
+var code = "frem: 10 cm\nhøjtaler: Hello\n\nNy funktion: toWall (\n\tfrem:til kontakt\n \ttilbage: 5 cm\n)\n\nFunktion:toWall\nDrej: 90 grader til højre\n frem: til kontakt\n\nGentag: 3 gange(\n\tDrej: 40 grader til højre\n\thøjtaler: Right\n\tDrej: 10 grader til venstre\n\thøjtaler: Left\n)\n\nFrem: til kontakt\nHvis: Farve er rød (\n\tMotorA: 1 rotation frem\n)\nEllers hvis: farve er sort(\n\tMotorA: 3 rotationer tilbage\n)\nEllers: (\n\tmotorA: 4 rotationer frem\n)\n\ntilbage: 5 cm\nDrej: 90 grader til venstre\n\nGentag: til kontakt (\n\tHvis: Farve er rød (\n\t\tBrems\n\t)\n\tEllers: (\n\t\tFrem\n\t)\n)\n\nTilbage: 5 cm\nDrej: 40 grader til højre\nTilbage: 1 sekund\n\nFrem: til kontakt\n Tilbage: 5 cm\nDrej: 90 grader til venstre"
 
 
 print("#### Code ####")
