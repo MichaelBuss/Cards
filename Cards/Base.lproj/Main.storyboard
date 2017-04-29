@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F60a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="12062"/>
@@ -871,14 +871,14 @@
                                         <segue destination="tj4-E2-LXb" kind="sheet" id="7YW-Nt-dUL"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="6BF79E9F-2635-429C-9097-B6F576268D22" label="Help" paletteLabel="Help" image="NSInfo" id="sBG-hd-cHR">
+                                <toolbarItem implicitItemIdentifier="6BF79E9F-2635-429C-9097-B6F576268D22" label="Help" paletteLabel="Help" image="Help" id="sBG-hd-cHR">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="40" height="25"/>
                                     <size key="maxSize" width="40" height="25"/>
                                     <button key="view" verticalHuggingPriority="750" id="9ho-eI-Fsf">
                                         <rect key="frame" x="0.0" y="14" width="40" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSInfo" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="erp-kY-Sp4">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="Help" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="erp-kY-Sp4">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                             <string key="keyEquivalent">,</string>
@@ -1252,14 +1252,14 @@
                             <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isy-cz-xaP">
                                 <rect key="frame" x="0.0" y="0.0" width="550" height="350"/>
                                 <clipView key="contentView" id="a12-Dy-eew">
-                                    <rect key="frame" x="1" y="1" width="533" height="348"/>
+                                    <rect key="frame" x="1" y="1" width="548" height="348"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView importsGraphics="NO" richText="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="2yh-pZ-Iqy" customClass="TextView" customModule="Cards" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="533" height="348"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="548" height="348"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="533" height="348"/>
+                                            <size key="minSize" width="548" height="348"/>
                                             <size key="maxSize" width="553" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
@@ -1271,7 +1271,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="bpk-P4-I85">
-                                    <rect key="frame" x="534" y="1" width="15" height="348"/>
+                                    <rect key="frame" x="533" y="1" width="16" height="348"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
@@ -1295,9 +1295,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Help" width="19" height="19"/>
         <image name="NSActionTemplate" width="14" height="14"/>
         <image name="NSAddTemplate" width="11" height="11"/>
-        <image name="NSInfo" width="32" height="32"/>
         <image name="NSShareTemplate" width="11" height="16"/>
         <image name="Overview" width="204" height="302"/>
         <image name="Presets_Beethoven" width="168" height="168"/>
