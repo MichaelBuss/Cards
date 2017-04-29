@@ -797,7 +797,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="snippetTableViewOutlet" destination="oRc-ce-lO4" id="QOK-6F-Yj5"/>
+                        <outlet property="snippetTableViewOutlet" destination="oRc-ce-lO4" id="cbY-JS-3EY"/>
                     </connections>
                 </viewController>
                 <customObject id="aZc-NN-Wmv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -833,7 +833,7 @@
                                         </buttonCell>
                                     </button>
                                     <connections>
-                                        <segue destination="5yO-oG-wL5" kind="popover" popoverAnchorView="PWv-55-MoF" popoverBehavior="t" preferredEdge="maxY" id="4ba-Q1-PCn"/>
+                                        <segue destination="5yO-oG-wL5" kind="popover" identifier="snippet" popoverAnchorView="PWv-55-MoF" popoverBehavior="t" preferredEdge="maxY" id="4ba-Q1-PCn"/>
                                     </connections>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="0271F6AC-D3B1-4DB0-B52C-EF9C69D2B269" label="Run" paletteLabel="Run" toolTip="Run" image="Run" id="bG3-s6-c8E">
@@ -909,7 +909,7 @@
                                     <textField key="view" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="Rca-DQ-kEi">
                                         <rect key="frame" x="0.0" y="14" width="96" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="2H4-WN-6Z7">
+                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" drawsBackground="YES" id="2H4-WN-6Z7">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1169,7 +1169,7 @@
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
                                                 <connections>
-                                                    <action selector="dismissController:" target="tj4-E2-LXb" id="8O0-du-PXw"/>
+                                                    <action selector="doneAction:" target="tj4-E2-LXb" id="itC-ij-DSH"/>
                                                 </connections>
                                             </button>
                                         </subviews>

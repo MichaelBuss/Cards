@@ -22,11 +22,13 @@ class Document: NSDocument {
         return true
     }
     
-    
     override func makeWindowControllers() {
         // Returns the Storyboard that contains your Document window.
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
         let windowController = storyboard.instantiateController(withIdentifier: "Document Window Controller") as! NSWindowController
+        if let vc = windowController.contentViewController as? ViewController {
+            vc.textViewOutlet.string = content
+        }
         self.addWindowController(windowController)
     }
     
@@ -34,10 +36,16 @@ class Document: NSDocument {
         content = try String(contentsOf: url, encoding: String.Encoding.utf8)
     }
     
+    override func data(ofType typeName: String) throws -> Data {
+        if let vc = self.windowControllers[0].contentViewController as? ViewController {
+            return vc.textViewOutlet.string?.data(using: String.Encoding.utf8) ?? Data()
+        } else {
+            return Data()
+        }
+    }
+    
     func write(save text: String) throws {
-        //try content.write(to: url, atomically: true, encoding: String.Encoding.utf8)
         try text.write(to: fileURL!, atomically: true, encoding: String.Encoding.utf8)
-        
     }
     
 

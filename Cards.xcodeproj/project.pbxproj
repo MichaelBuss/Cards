@@ -28,36 +28,27 @@
 		4CB174A11E79344E000D333D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB174A01E79344E000D333D /* Assets.xcassets */; };
 		4CB174A41E79344E000D333D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CB174A21E79344E000D333D /* Main.storyboard */; };
 		4CCBAA021E8E2C6800D45B9B /* Playground in Resources */ = {isa = PBXBuildFile; fileRef = 4CCBAA011E8E2C6800D45B9B /* Playground */; };
+		F7427B8F1EB4B7CA00D399F1 /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7427B8E1EB4B7CA00D399F1 /* NMSSH.framework */; };
+		F7427B901EB4BBEF00D399F1 /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7427B8E1EB4B7CA00D399F1 /* NMSSH.framework */; };
+		F7427B911EB4BBEF00D399F1 /* NMSSH.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7427B8E1EB4B7CA00D399F1 /* NMSSH.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F7427B941EB4C43400D399F1 /* header.py in Resources */ = {isa = PBXBuildFile; fileRef = F7427B931EB4C43400D399F1 /* header.py */; };
 		F7E6D1C21EB495FB00E5361F /* Interpretter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D1C11EB495FB00E5361F /* Interpretter.swift */; };
 		F7E6D1C41EB49B9700E5361F /* pyscirpt.py in Resources */ = {isa = PBXBuildFile; fileRef = F7E6D1C31EB49B9700E5361F /* pyscirpt.py */; };
-		F7E6D2C01EB4ABAC00E5361F /* NMSSHLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D2A11EB4ABAC00E5361F /* NMSSHLogger.m */; };
-		F7E6D2C11EB4ABAC00E5361F /* socket_helper.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D2A31EB4ABAC00E5361F /* socket_helper.m */; };
-		F7E6D2C21EB4ABAC00E5361F /* NMSFTP.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D2A51EB4ABAC00E5361F /* NMSFTP.m */; };
-		F7E6D2C31EB4ABAC00E5361F /* NMSFTPFile.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D2A71EB4ABAC00E5361F /* NMSFTPFile.m */; };
-		F7E6D2C41EB4ABAC00E5361F /* NMSSHChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D2AB1EB4ABAC00E5361F /* NMSSHChannel.m */; };
-		F7E6D2C51EB4ABAC00E5361F /* NMSSHConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D2AD1EB4ABAC00E5361F /* NMSSHConfig.m */; };
-		F7E6D2C61EB4ABAC00E5361F /* NMSSHHostConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D2AF1EB4ABAC00E5361F /* NMSSHHostConfig.m */; };
-		F7E6D2C71EB4ABAC00E5361F /* NMSSHSession.m in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D2B11EB4ABAC00E5361F /* NMSSHSession.m */; };
-		F7E6D2C81EB4ABAC00E5361F /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E6D2BD1EB4ABAC00E5361F /* libcrypto.a */; };
-		F7E6D2C91EB4ABAC00E5361F /* libssh2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E6D2BE1EB4ABAC00E5361F /* libssh2.a */; };
-		F7E6D2CA1EB4ABAC00E5361F /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E6D2BF1EB4ABAC00E5361F /* libssl.a */; };
-		F7E6D2CB1EB4AD4200E5361F /* NMSSH+Protected.h in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D29F1EB4ABAC00E5361F /* NMSSH+Protected.h */; };
-		F7E6D2CC1EB4AD4200E5361F /* NMSSHLogger.h in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D2A01EB4ABAC00E5361F /* NMSSHLogger.h */; };
-		F7E6D2CD1EB4AD4200E5361F /* socket_helper.h in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D2A21EB4ABAC00E5361F /* socket_helper.h */; };
-		F7E6D2CE1EB4AD4200E5361F /* NMSFTP.h in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D2A41EB4ABAC00E5361F /* NMSFTP.h */; };
-		F7E6D2CF1EB4AD4200E5361F /* NMSFTPFile.h in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D2A61EB4ABAC00E5361F /* NMSFTPFile.h */; };
-		F7E6D2D01EB4AD4200E5361F /* NMSSH-Prefix.pch in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D2A81EB4ABAC00E5361F /* NMSSH-Prefix.pch */; };
-		F7E6D2D11EB4AD4200E5361F /* NMSSH.h in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D2A91EB4ABAC00E5361F /* NMSSH.h */; };
-		F7E6D2D21EB4AD4200E5361F /* NMSSHChannel.h in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D2AA1EB4ABAC00E5361F /* NMSSHChannel.h */; };
-		F7E6D2D31EB4AD4200E5361F /* NMSSHConfig.h in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D2AC1EB4ABAC00E5361F /* NMSSHConfig.h */; };
-		F7E6D2D41EB4AD4200E5361F /* NMSSHHostConfig.h in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D2AE1EB4ABAC00E5361F /* NMSSHHostConfig.h */; };
-		F7E6D2D51EB4AD4200E5361F /* NMSSHSession.h in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D2B01EB4ABAC00E5361F /* NMSSHSession.h */; };
-		F7E6D2D61EB4AD4200E5361F /* NMSSHChannelDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D2B31EB4ABAC00E5361F /* NMSSHChannelDelegate.h */; };
-		F7E6D2D71EB4AD4200E5361F /* NMSSHSessionDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D2B41EB4ABAC00E5361F /* NMSSHSessionDelegate.h */; };
-		F7E6D2D81EB4AD4200E5361F /* libssh2.h in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D2B91EB4ABAC00E5361F /* libssh2.h */; };
-		F7E6D2D91EB4AD4200E5361F /* libssh2_publickey.h in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D2BA1EB4ABAC00E5361F /* libssh2_publickey.h */; };
-		F7E6D2DA1EB4AD4200E5361F /* libssh2_sftp.h in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D2BB1EB4ABAC00E5361F /* libssh2_sftp.h */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F7427B921EB4BBEF00D399F1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F7427B911EB4BBEF00D399F1 /* NMSSH.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3AC500061EA77B43006687E2 /* Lexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
@@ -84,37 +75,11 @@
 		4CB174A31E79344E000D333D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4CB174A51E79344E000D333D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CCBAA011E8E2C6800D45B9B /* Playground */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Playground; sourceTree = "<group>"; };
+		F7427B8E1EB4B7CA00D399F1 /* NMSSH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMSSH.framework; sourceTree = "<group>"; };
+		F7427B931EB4C43400D399F1 /* header.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = header.py; sourceTree = "<group>"; };
 		F7E6D1C11EB495FB00E5361F /* Interpretter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpretter.swift; sourceTree = "<group>"; };
 		F7E6D1C31EB49B9700E5361F /* pyscirpt.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = pyscirpt.py; sourceTree = "<group>"; };
-		F7E6D1C51EB49DF600E5361F /* SSHPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SSHPlayground.playground; sourceTree = "<group>"; };
 		F7E6D2621EB4A4A600E5361F /* Cards-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cards-Bridging-Header.h"; sourceTree = "<group>"; };
-		F7E6D29F1EB4ABAC00E5361F /* NMSSH+Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NMSSH+Protected.h"; sourceTree = "<group>"; };
-		F7E6D2A01EB4ABAC00E5361F /* NMSSHLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMSSHLogger.h; sourceTree = "<group>"; };
-		F7E6D2A11EB4ABAC00E5361F /* NMSSHLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMSSHLogger.m; sourceTree = "<group>"; };
-		F7E6D2A21EB4ABAC00E5361F /* socket_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = socket_helper.h; sourceTree = "<group>"; };
-		F7E6D2A31EB4ABAC00E5361F /* socket_helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = socket_helper.m; sourceTree = "<group>"; };
-		F7E6D2A41EB4ABAC00E5361F /* NMSFTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMSFTP.h; sourceTree = "<group>"; };
-		F7E6D2A51EB4ABAC00E5361F /* NMSFTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMSFTP.m; sourceTree = "<group>"; };
-		F7E6D2A61EB4ABAC00E5361F /* NMSFTPFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMSFTPFile.h; sourceTree = "<group>"; };
-		F7E6D2A71EB4ABAC00E5361F /* NMSFTPFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMSFTPFile.m; sourceTree = "<group>"; };
-		F7E6D2A81EB4ABAC00E5361F /* NMSSH-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NMSSH-Prefix.pch"; sourceTree = "<group>"; };
-		F7E6D2A91EB4ABAC00E5361F /* NMSSH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMSSH.h; sourceTree = "<group>"; };
-		F7E6D2AA1EB4ABAC00E5361F /* NMSSHChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMSSHChannel.h; sourceTree = "<group>"; };
-		F7E6D2AB1EB4ABAC00E5361F /* NMSSHChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMSSHChannel.m; sourceTree = "<group>"; };
-		F7E6D2AC1EB4ABAC00E5361F /* NMSSHConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMSSHConfig.h; sourceTree = "<group>"; };
-		F7E6D2AD1EB4ABAC00E5361F /* NMSSHConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMSSHConfig.m; sourceTree = "<group>"; };
-		F7E6D2AE1EB4ABAC00E5361F /* NMSSHHostConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMSSHHostConfig.h; sourceTree = "<group>"; };
-		F7E6D2AF1EB4ABAC00E5361F /* NMSSHHostConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMSSHHostConfig.m; sourceTree = "<group>"; };
-		F7E6D2B01EB4ABAC00E5361F /* NMSSHSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMSSHSession.h; sourceTree = "<group>"; };
-		F7E6D2B11EB4ABAC00E5361F /* NMSSHSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMSSHSession.m; sourceTree = "<group>"; };
-		F7E6D2B31EB4ABAC00E5361F /* NMSSHChannelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMSSHChannelDelegate.h; sourceTree = "<group>"; };
-		F7E6D2B41EB4ABAC00E5361F /* NMSSHSessionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMSSHSessionDelegate.h; sourceTree = "<group>"; };
-		F7E6D2B91EB4ABAC00E5361F /* libssh2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libssh2.h; sourceTree = "<group>"; };
-		F7E6D2BA1EB4ABAC00E5361F /* libssh2_publickey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libssh2_publickey.h; sourceTree = "<group>"; };
-		F7E6D2BB1EB4ABAC00E5361F /* libssh2_sftp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libssh2_sftp.h; sourceTree = "<group>"; };
-		F7E6D2BD1EB4ABAC00E5361F /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
-		F7E6D2BE1EB4ABAC00E5361F /* libssh2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssh2.a; sourceTree = "<group>"; };
-		F7E6D2BF1EB4ABAC00E5361F /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,9 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7E6D2C81EB4ABAC00E5361F /* libcrypto.a in Frameworks */,
-				F7E6D2C91EB4ABAC00E5361F /* libssh2.a in Frameworks */,
-				F7E6D2CA1EB4ABAC00E5361F /* libssl.a in Frameworks */,
+				F7427B901EB4BBEF00D399F1 /* NMSSH.framework in Frameworks */,
+				F7427B8F1EB4B7CA00D399F1 /* NMSSH.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,8 +154,7 @@
 		4CB174961E79344E000D333D /* Cards */ = {
 			isa = PBXGroup;
 			children = (
-				F7E6D29D1EB4ABAC00E5361F /* NMSSH */,
-				F7E6D2B51EB4ABAC00E5361F /* NMSSH-OSX */,
+				F7427B8E1EB4B7CA00D399F1 /* NMSSH.framework */,
 				4CB174971E79344E000D333D /* AppDelegate.swift */,
 				4C4F43F21E8C2157007641A8 /* TextView.swift */,
 				4C1D65C41E7D9D6B009F04B8 /* WindowController.swift */,
@@ -206,102 +169,13 @@
 				4CB174A01E79344E000D333D /* Assets.xcassets */,
 				4CB174A21E79344E000D333D /* Main.storyboard */,
 				4C1D65C61E7DD286009F04B8 /* Hello.py */,
+				F7427B931EB4C43400D399F1 /* header.py */,
 				F7E6D1C31EB49B9700E5361F /* pyscirpt.py */,
 				4C5680251EA62AE400465500 /* sshpass */,
 				4C6798AC1E7EA46400B80CD2 /* Connect.sh */,
 				4CB174A51E79344E000D333D /* Info.plist */,
-				F7E6D1C51EB49DF600E5361F /* SSHPlayground.playground */,
 			);
 			path = Cards;
-			sourceTree = "<group>";
-		};
-		F7E6D29D1EB4ABAC00E5361F /* NMSSH */ = {
-			isa = PBXGroup;
-			children = (
-				F7E6D29E1EB4ABAC00E5361F /* Config */,
-				F7E6D2A41EB4ABAC00E5361F /* NMSFTP.h */,
-				F7E6D2A51EB4ABAC00E5361F /* NMSFTP.m */,
-				F7E6D2A61EB4ABAC00E5361F /* NMSFTPFile.h */,
-				F7E6D2A71EB4ABAC00E5361F /* NMSFTPFile.m */,
-				F7E6D2A81EB4ABAC00E5361F /* NMSSH-Prefix.pch */,
-				F7E6D2A91EB4ABAC00E5361F /* NMSSH.h */,
-				F7E6D2AA1EB4ABAC00E5361F /* NMSSHChannel.h */,
-				F7E6D2AB1EB4ABAC00E5361F /* NMSSHChannel.m */,
-				F7E6D2AC1EB4ABAC00E5361F /* NMSSHConfig.h */,
-				F7E6D2AD1EB4ABAC00E5361F /* NMSSHConfig.m */,
-				F7E6D2AE1EB4ABAC00E5361F /* NMSSHHostConfig.h */,
-				F7E6D2AF1EB4ABAC00E5361F /* NMSSHHostConfig.m */,
-				F7E6D2B01EB4ABAC00E5361F /* NMSSHSession.h */,
-				F7E6D2B11EB4ABAC00E5361F /* NMSSHSession.m */,
-				F7E6D2B21EB4ABAC00E5361F /* Protocols */,
-			);
-			path = NMSSH;
-			sourceTree = "<group>";
-		};
-		F7E6D29E1EB4ABAC00E5361F /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				F7E6D29F1EB4ABAC00E5361F /* NMSSH+Protected.h */,
-				F7E6D2A01EB4ABAC00E5361F /* NMSSHLogger.h */,
-				F7E6D2A11EB4ABAC00E5361F /* NMSSHLogger.m */,
-				F7E6D2A21EB4ABAC00E5361F /* socket_helper.h */,
-				F7E6D2A31EB4ABAC00E5361F /* socket_helper.m */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
-		F7E6D2B21EB4ABAC00E5361F /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				F7E6D2B31EB4ABAC00E5361F /* NMSSHChannelDelegate.h */,
-				F7E6D2B41EB4ABAC00E5361F /* NMSSHSessionDelegate.h */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		F7E6D2B51EB4ABAC00E5361F /* NMSSH-OSX */ = {
-			isa = PBXGroup;
-			children = (
-				F7E6D2B61EB4ABAC00E5361F /* Libraries */,
-			);
-			path = "NMSSH-OSX";
-			sourceTree = "<group>";
-		};
-		F7E6D2B61EB4ABAC00E5361F /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				F7E6D2B71EB4ABAC00E5361F /* include */,
-				F7E6D2BC1EB4ABAC00E5361F /* lib */,
-			);
-			path = Libraries;
-			sourceTree = "<group>";
-		};
-		F7E6D2B71EB4ABAC00E5361F /* include */ = {
-			isa = PBXGroup;
-			children = (
-				F7E6D2B81EB4ABAC00E5361F /* libssh2 */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		F7E6D2B81EB4ABAC00E5361F /* libssh2 */ = {
-			isa = PBXGroup;
-			children = (
-				F7E6D2B91EB4ABAC00E5361F /* libssh2.h */,
-				F7E6D2BA1EB4ABAC00E5361F /* libssh2_publickey.h */,
-				F7E6D2BB1EB4ABAC00E5361F /* libssh2_sftp.h */,
-			);
-			path = libssh2;
-			sourceTree = "<group>";
-		};
-		F7E6D2BC1EB4ABAC00E5361F /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				F7E6D2BD1EB4ABAC00E5361F /* libcrypto.a */,
-				F7E6D2BE1EB4ABAC00E5361F /* libssh2.a */,
-				F7E6D2BF1EB4ABAC00E5361F /* libssl.a */,
-			);
-			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +188,7 @@
 				4CB174901E79344E000D333D /* Sources */,
 				4CB174911E79344E000D333D /* Frameworks */,
 				4CB174921E79344E000D333D /* Resources */,
+				F7427B921EB4BBEF00D399F1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -365,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C5680261EA62AE400465500 /* sshpass in Resources */,
+				F7427B941EB4C43400D399F1 /* header.py in Resources */,
 				F7E6D1C41EB49B9700E5361F /* pyscirpt.py in Resources */,
 				4C6798AD1E7EA60300B80CD2 /* Connect.sh in Resources */,
 				4CB174A11E79344E000D333D /* Assets.xcassets in Resources */,
@@ -381,46 +257,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7E6D2CB1EB4AD4200E5361F /* NMSSH+Protected.h in Sources */,
-				F7E6D2CC1EB4AD4200E5361F /* NMSSHLogger.h in Sources */,
-				F7E6D2CD1EB4AD4200E5361F /* socket_helper.h in Sources */,
-				F7E6D2CE1EB4AD4200E5361F /* NMSFTP.h in Sources */,
-				F7E6D2CF1EB4AD4200E5361F /* NMSFTPFile.h in Sources */,
-				F7E6D2D01EB4AD4200E5361F /* NMSSH-Prefix.pch in Sources */,
-				F7E6D2D11EB4AD4200E5361F /* NMSSH.h in Sources */,
-				F7E6D2D21EB4AD4200E5361F /* NMSSHChannel.h in Sources */,
-				F7E6D2D31EB4AD4200E5361F /* NMSSHConfig.h in Sources */,
-				F7E6D2D41EB4AD4200E5361F /* NMSSHHostConfig.h in Sources */,
-				F7E6D2D51EB4AD4200E5361F /* NMSSHSession.h in Sources */,
-				F7E6D2D61EB4AD4200E5361F /* NMSSHChannelDelegate.h in Sources */,
-				F7E6D2D71EB4AD4200E5361F /* NMSSHSessionDelegate.h in Sources */,
-				F7E6D2D81EB4AD4200E5361F /* libssh2.h in Sources */,
-				F7E6D2D91EB4AD4200E5361F /* libssh2_publickey.h in Sources */,
-				F7E6D2DA1EB4AD4200E5361F /* libssh2_sftp.h in Sources */,
 				4C56802C1EA7946F00465500 /* SnippetViewController.swift in Sources */,
 				3AC5000C1EA77B88006687E2 /* Token.swift in Sources */,
 				4C1D65C51E7D9D6B009F04B8 /* WindowController.swift in Sources */,
 				4CA90A611EAA172200D63C52 /* SnippetModel.swift in Sources */,
 				4C0809E81EAF83F000835258 /* HelpViewController.swift in Sources */,
-				F7E6D2C51EB4ABAC00E5361F /* NMSSHConfig.m in Sources */,
 				F7E6D1C21EB495FB00E5361F /* Interpretter.swift in Sources */,
 				3AC500091EA77B43006687E2 /* Lexer.swift in Sources */,
 				4CB1749A1E79344E000D333D /* ViewController.swift in Sources */,
-				F7E6D2C11EB4ABAC00E5361F /* socket_helper.m in Sources */,
 				3AC5000A1EA77B43006687E2 /* Highlighter.swift in Sources */,
 				4C4F43F31E8C2157007641A8 /* TextView.swift in Sources */,
 				4CB174981E79344E000D333D /* AppDelegate.swift in Sources */,
-				F7E6D2C61EB4ABAC00E5361F /* NMSSHHostConfig.m in Sources */,
-				F7E6D2C21EB4ABAC00E5361F /* NMSFTP.m in Sources */,
 				4CB1749C1E79344E000D333D /* Document.swift in Sources */,
-				F7E6D2C01EB4ABAC00E5361F /* NMSSHLogger.m in Sources */,
 				4CAB2F961EA7A51200D02696 /* SnippetCell.swift in Sources */,
 				4C56802A1EA787DB00465500 /* WindowModel.swift in Sources */,
 				4C5680281EA62BE700465500 /* ConfigureModel.swift in Sources */,
 				4C6798AB1E7E9DB300B80CD2 /* ConfigureViewController.swift in Sources */,
-				F7E6D2C41EB4ABAC00E5361F /* NMSSHChannel.m in Sources */,
-				F7E6D2C71EB4ABAC00E5361F /* NMSSHSession.m in Sources */,
-				F7E6D2C31EB4ABAC00E5361F /* NMSFTPFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,8 +386,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = FQ4T4QU544;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Cards",
+				);
 				INFOPLIST_FILE = Cards/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/ @executable_path/../Frameworks";
+				MODULE_NAME = Cards;
 				PRODUCT_BUNDLE_IDENTIFIER = NoobLabs.Cards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Cards/Cards-Bridging-Header.h";
@@ -549,8 +406,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = FQ4T4QU544;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Cards",
+				);
 				INFOPLIST_FILE = Cards/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/ @executable_path/../Frameworks";
+				MODULE_NAME = Cards;
 				PRODUCT_BUNDLE_IDENTIFIER = NoobLabs.Cards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Cards/Cards-Bridging-Header.h";

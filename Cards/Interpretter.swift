@@ -8,26 +8,33 @@
 
 import Cocoa
 
+struct CompileSettings {
+    var rotationmm: String
+    var rotationdeg: String
+}
+
 class Interpretter: NSObject {
     
-    public static func compile(code: String) -> String {
+    public static func compile(code: String, settings: CompileSettings) -> String {
         
-        let interpretter = Interpretter()
-        return header + interpretter.convertToPython(code: code)
-    
-        var session = NMSSHSession()
+        do {
+            let path = Bundle.main.path(forResource: "header", ofType: "py")
+            var header = try String(contentsOfFile: path!, encoding: String.Encoding.utf8)
+            
+            header = header.replacingOccurrences(of: "{rotationmm}", with: settings.rotationmm)
+            header = header.replacingOccurrences(of: "{rotationdeg}", with: settings.rotationdeg)
+            
+            let interpretter = Interpretter()
+            return header + interpretter.convertToPython(code: code)
+        } catch _ {
+            print("Could not find header file")
+        }
+        return ""
     }
     
     enum CustomError : Error {
         case BadFormat(String)
     }
-    
-    static let header = "#!/usr/bin/env python3\nfrom ev3dev.auto import *\n\n# Connect sensors.\nts = TouchSensor();    assert ts.connected\ncs = ColorSensor();    assert ts.connected\ncs.mode = 'COL-COLOR'\nus = UltrasonicSensor();    assert ts.connected\nus.mode = 'US-DIST-CM' # reports 'cm' even though the sensor measures 'mm'\nbtn = Button()\nmB = LargeMotor('outB')\nmC = LargeMotor('outC')\nmA = MediumMotor('outA')\n\n# Variables\nrotationmm = 183 # One wheel rotation equals x mm. From configure panel in app. Can be static for now\nrotationdeg = 210 # One wheel rotation in opposite directions equals the robot turning x degrees. From configure panel in app. Can be static for now\ndriveRatio = (360/(rotationmm))*10\nturnRatio = 360/rotationdeg\n\nSound.speak('Starting').wait()\n\ndef drive(unit=\"degrees\", amount=360, speed=50, direction=1):\n\t# unit = degrees, seconds, rotations, cm\n\t# amount = any int\n\t# speed = 0-100\n\t# direction = +/-1\n\tspeed = speed*direction*10 # Because ev3dev motors gros from -1000 to +1000\n\n\tif unit == \"degrees\":\n\t\t# run_to_rel_pos is the only one that don't react to negative speed, thus *direction on position instead\n\t\tmB.run_to_rel_pos(position_sp=amount*direction, speed_sp=speed, stop_action=\"brake\")\n\t\tmC.run_to_rel_pos(position_sp=amount*direction, speed_sp=speed, stop_action=\"brake\")\n\t\tmB.wait_while('running')\n\t\tmC.wait_while('running')\n\telif unit == \"seconds\":\n\t\tamount = amount*1000 # Because ev3dev uses milliseconds\n\t\tmB.run_timed(time_sp=amount, speed_sp=speed, stop_action=\"brake\")\n\t\tmC.run_timed(time_sp=amount, speed_sp=speed, stop_action=\"brake\")\n\t\tmB.wait_while('running')\n\t\tmC.wait_while('running')\n\telif unit == \"rotations\":\n\t\tmB.run_to_rel_pos(position_sp=amount*direction*360, speed_sp=speed, stop_action=\"brake\")\n\t\tmC.run_to_rel_pos(position_sp=amount*direction*360, speed_sp=speed, stop_action=\"brake\")\n\t\tmB.wait_while('running')\n\t\tmC.wait_while('running')\n\telif unit == \"cm\":\n\t\t# run_to_rel_pos is the only one that don't react to negative speed, thus *direction on position instead\n\t\tmB.run_to_rel_pos(position_sp=amount*direction*driveRatio, speed_sp=speed, stop_action=\"brake\")\n\t\tmC.run_to_rel_pos(position_sp=amount*direction*driveRatio, speed_sp=speed, stop_action=\"brake\")\n\t\tmB.wait_while('running')\n\t\tmC.wait_while('running')\n    elif unit=\"untilTouch\":\n        while not ts.value():\n            drive(unit=\"forever\")\n        brake()\n\telse:\n\t\tmB.run_forever(speed_sp=speed, stop_action=\"brake\")\n\t\tmC.run_forever(speed_sp=speed, stop_action=\"brake\")\n\n\ndef brake():\n    mB.stop(stop_action=\"brake\")\n    mC.stop(stop_action=\"brake\")\n\n\ndef turn(unit =\"degrees\" ,amount=90, speed=50, direction=1):\n\tif unit == \"degrees\":\n\t\tspeed = speed*10 # Because ev3dev motors gros from -1000 to +1000\n\t\t# run_to_rel_pos is the only one that don't react to negative speed, thus *direction on position instead\n\t\tmB.run_to_rel_pos(position_sp=amount*turnRatio*direction, speed_sp=speed, stop_action=\"brake\")\n\t\tmC.run_to_rel_pos(position_sp=amount*turnRatio*-direction, speed_sp=speed, stop_action=\"brake\")\n\t\tmB.wait_while('running')\n\t\tmC.wait_while('running')\n"
-    
-    
-    
-    
-    
     
     //Indents lines of code by one tab
     private func indent(code: String) -> String {

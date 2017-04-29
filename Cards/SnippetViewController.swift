@@ -8,65 +8,59 @@
 
 import Cocoa
 
-class SnippetViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
+protocol SnippetViewControllerDelegate: class {
+    func didChoseSnippet(snippet: Snippet)
+}
 
+struct Snippet {
+    var title: String
+    var content: NSImage
+}
+
+class SnippetViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
+    
+    weak var delegate: SnippetViewControllerDelegate?
+    
     @IBOutlet weak var snippetTableViewOutlet: NSTableView!
-var cellText = [
-        "Frem",
-        "Tilbage",
-        "Drej",
-        "Brems",
-        "Enkelt Stor Motor",
-        "Enkelt Lille Motor",
-        "Højttaler",
-        "Ny Funktion",
-        "Brug Funktion",
-        "Gentag",
-        "Gør Hvis",
-        "Husk"]
-    
-    var cellImages = [
-        #imageLiteral(resourceName: "Snippets_Arrow Forward"),
-        #imageLiteral(resourceName: "Snippets_Arrow Backward"),
-        #imageLiteral(resourceName: "Snippets_Arrow Turn Sharp"),
-        #imageLiteral(resourceName: "Snippets_Break"),
-        #imageLiteral(resourceName: "Snippets_Motor Large"),
-        #imageLiteral(resourceName: "Snippets_Motor Small"),
-        #imageLiteral(resourceName: "Snippets_Speaker"),
-        #imageLiteral(resourceName: "Snippets_Function New"),
-        #imageLiteral(resourceName: "Snippets_Function Use"),
-        #imageLiteral(resourceName: "Snippets_Loop"),
-        #imageLiteral(resourceName: "Snippets_Do If"),
-        #imageLiteral(resourceName: "Snippets_Remember")
+    var snippets = [
+        Snippet(title: "Frem", content: #imageLiteral(resourceName: "Snippets_Arrow Forward")),
+        Snippet(title: "Tilbage", content: #imageLiteral(resourceName: "Snippets_Arrow Backward")),
+        Snippet(title: "Drej", content: #imageLiteral(resourceName: "Snippets_Arrow Turn Sharp")),
+        Snippet(title: "Brems", content: #imageLiteral(resourceName: "Snippets_Break")),
+        Snippet(title: "Enkelt Stor Motor", content: #imageLiteral(resourceName: "Snippets_Motor Large")),
+        Snippet(title: "Enkelt Mellem Motor", content: #imageLiteral(resourceName: "Snippets_Motor Small")),
+        Snippet(title: "Højtaler", content: #imageLiteral(resourceName: "Snippets_Speaker")),
+        Snippet(title: "Ny funktion", content: #imageLiteral(resourceName: "Snippets_Function New")),
+        Snippet(title: "Brug funktion", content: #imageLiteral(resourceName: "Snippets_Function Use")),
+        Snippet(title: "Gentag", content: #imageLiteral(resourceName: "Snippets_Loop")),
+        Snippet(title: "Gør hvis", content: #imageLiteral(resourceName: "Snippets_Do If")),
+        Snippet(title: "Husk", content: #imageLiteral(resourceName: "Snippets_Remember"))
     ]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         snippetTableViewOutlet.reloadData()
+        snippetTableViewOutlet.delegate = self
     }
 
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return cellText.count
+        return snippets.count
     }
 
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         if let cell = tableView.make(withIdentifier: "cell", owner: nil) as? SnippetCell {
-            if cellText.count == cellImages.count{ // Checks for equal amounts of images and texts
-                cell.cellSetup(image: cellImages[row], title: cellText[row])
-            } else {
-                cell.cellSetup(image: #imageLiteral(resourceName: "Snippets_Missing"), title: "Missing description")
-            }
+            cell.cellSetup(image: snippets[row].content, title: snippets[row].title)
             return cell
         }
         return nil
     }
     
-    func  tableViewSelectionDidChange(_ notification: Notification) {
-        if (self.snippetTableViewOutlet.selectedRow >= 0){ //Only runs if an item is selected, not deselected
-        let selectedItem = self.snippetTableViewOutlet.selectedRow
-        print(selectedItem)
+    func tableView(_ tableView: NSTableView, shouldSelectRow row: Int) -> Bool {
+        delegate?.didChoseSnippet(snippet: snippets[row])
+        return true
+    }
+    
+    func tableViewSelectionDidChange(_ notification: Notification) {
         self.snippetTableViewOutlet.deselectRow(self.snippetTableViewOutlet.selectedRow)
-        }
     }
     
 }
