@@ -32,8 +32,11 @@ class WindowController: NSWindowController {
     @IBAction func runAction(_ sender: Any) {
         //When the run button is pressed
 //        runOutlet.isEnabled = false //Disable button while code is running
+        
+        let viewCtrl: ViewController = self.contentViewController as! ViewController
+        
         runOutlet.image = #imageLiteral(resourceName: "Stop")
-        windowModel.runPython()
+        windowModel.runPython(code: viewCtrl.textViewOutlet.string!)
         
         
 //        runOutlet.isEnabled = true //Enable button again
