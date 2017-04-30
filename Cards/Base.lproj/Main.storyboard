@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="12062"/>
@@ -657,18 +657,52 @@
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--View Controller-->
+        <!--Hjælp-->
         <scene sceneID="Vds-b1-aqm">
             <objects>
-                <viewController id="Zbt-sN-Ijk" sceneMemberID="viewController">
+                <viewController title="Hjælp" id="Zbt-sN-Ijk" customClass="HelpViewController" customModule="Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="oob-fk-Sym">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="255"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kk0-RE-gx9">
+                                <rect key="frame" x="-2" y="216" width="454" height="31"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Velkommen til Cards!" id="v7V-C1-vfi">
+                                    <font key="font" size="26" name=".AppleSystemUIFontLight"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dG3-r3-zfF">
+                                <rect key="frame" x="6" y="8" width="438" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="vIe-ef-h8s"/>
+                                </constraints>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="DdS-3s-3Qh">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Kk0-RE-gx9" firstAttribute="top" secondItem="oob-fk-Sym" secondAttribute="top" constant="8" id="4VB-ve-wvS"/>
+                            <constraint firstItem="dG3-r3-zfF" firstAttribute="top" secondItem="Kk0-RE-gx9" secondAttribute="bottom" constant="8" id="9Ar-ZW-GZL"/>
+                            <constraint firstAttribute="bottom" secondItem="dG3-r3-zfF" secondAttribute="bottom" constant="8" id="BSG-mw-CH5"/>
+                            <constraint firstItem="dG3-r3-zfF" firstAttribute="leading" secondItem="oob-fk-Sym" secondAttribute="leading" constant="8" id="Qow-gL-QDC"/>
+                            <constraint firstAttribute="trailing" secondItem="dG3-r3-zfF" secondAttribute="trailing" constant="8" id="WEr-uB-FCI"/>
+                            <constraint firstAttribute="trailing" secondItem="Kk0-RE-gx9" secondAttribute="trailing" id="hC2-oh-OKf"/>
+                            <constraint firstItem="Kk0-RE-gx9" firstAttribute="leading" secondItem="oob-fk-Sym" secondAttribute="leading" id="piW-00-9QU"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="helpTextOutlet" destination="dG3-r3-zfF" id="zKi-LN-aYN"/>
+                        <outlet property="helpTitleOutlet" destination="Kk0-RE-gx9" id="QoF-hg-XQy"/>
+                    </connections>
                 </viewController>
                 <customObject id="ZJm-L1-zhB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-458" y="760"/>
+            <point key="canvasLocation" x="-457" y="734"/>
         </scene>
         <!--Snippet View Controller-->
         <scene sceneID="Huk-E4-qSd">
@@ -763,7 +797,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="snippetTableViewOutlet" destination="oRc-ce-lO4" id="QOK-6F-Yj5"/>
+                        <outlet property="snippetTableViewOutlet" destination="oRc-ce-lO4" id="cbY-JS-3EY"/>
                     </connections>
                 </viewController>
                 <customObject id="aZc-NN-Wmv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -799,7 +833,7 @@
                                         </buttonCell>
                                     </button>
                                     <connections>
-                                        <segue destination="5yO-oG-wL5" kind="popover" popoverAnchorView="PWv-55-MoF" popoverBehavior="t" preferredEdge="maxY" id="4ba-Q1-PCn"/>
+                                        <segue destination="5yO-oG-wL5" kind="popover" identifier="snippet" popoverAnchorView="PWv-55-MoF" popoverBehavior="t" preferredEdge="maxY" id="4ba-Q1-PCn"/>
                                     </connections>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="0271F6AC-D3B1-4DB0-B52C-EF9C69D2B269" label="Run" paletteLabel="Run" toolTip="Run" image="Run" id="bG3-s6-c8E">
@@ -837,14 +871,14 @@
                                         <segue destination="tj4-E2-LXb" kind="sheet" id="7YW-Nt-dUL"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="6BF79E9F-2635-429C-9097-B6F576268D22" label="Help" paletteLabel="Help" image="NSInfo" id="sBG-hd-cHR">
+                                <toolbarItem implicitItemIdentifier="6BF79E9F-2635-429C-9097-B6F576268D22" label="Help" paletteLabel="Help" image="Help" id="sBG-hd-cHR">
                                     <nil key="toolTip"/>
                                     <size key="minSize" width="40" height="25"/>
                                     <size key="maxSize" width="40" height="25"/>
                                     <button key="view" verticalHuggingPriority="750" id="9ho-eI-Fsf">
                                         <rect key="frame" x="0.0" y="14" width="40" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSInfo" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="erp-kY-Sp4">
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="Help" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="erp-kY-Sp4">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                             <string key="keyEquivalent">,</string>
@@ -875,7 +909,7 @@
                                     <textField key="view" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" id="Rca-DQ-kEi">
                                         <rect key="frame" x="0.0" y="14" width="96" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="2H4-WN-6Z7">
+                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" drawsBackground="YES" id="2H4-WN-6Z7">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -933,7 +967,7 @@
                                         <rect key="frame" x="40" y="55" width="375" height="110"/>
                                         <subviews>
                                             <stackView distribution="fill" orientation="horizontal" alignment="firstBaseline" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qTG-qV-fZa">
-                                                <rect key="frame" x="81.5" y="89" width="212" height="21"/>
+                                                <rect key="frame" x="82" y="89" width="212" height="21"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOM-T2-bcV">
                                                         <rect key="frame" x="-2" y="3" width="97" height="17"/>
@@ -972,7 +1006,7 @@
                                                 </customSpacing>
                                             </stackView>
                                             <stackView distribution="fill" orientation="horizontal" alignment="firstBaseline" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uC0-bN-uKz">
-                                                <rect key="frame" x="81.5" y="60" width="212" height="21"/>
+                                                <rect key="frame" x="82" y="60" width="212" height="21"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMl-6i-JFa">
                                                         <rect key="frame" x="-2" y="3" width="97" height="17"/>
@@ -1011,7 +1045,7 @@
                                                 </customSpacing>
                                             </stackView>
                                             <stackView distribution="fill" orientation="horizontal" alignment="firstBaseline" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jmb-Xl-55p">
-                                                <rect key="frame" x="7.5" y="30" width="360" height="22"/>
+                                                <rect key="frame" x="8" y="30" width="360" height="22"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaB-Ic-hBc">
                                                         <rect key="frame" x="-2" y="3" width="171" height="17"/>
@@ -1053,7 +1087,7 @@
                                                 </customSpacing>
                                             </stackView>
                                             <stackView distribution="fill" orientation="horizontal" alignment="firstBaseline" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iVK-UT-3H9">
-                                                <rect key="frame" x="7.5" y="0.0" width="360" height="22"/>
+                                                <rect key="frame" x="8" y="0.0" width="360" height="22"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZP-Xb-Igx">
                                                         <rect key="frame" x="-2" y="3" width="171" height="17"/>
@@ -1135,7 +1169,7 @@
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
                                                 <connections>
-                                                    <action selector="dismissController:" target="tj4-E2-LXb" id="8O0-du-PXw"/>
+                                                    <action selector="doneAction:" target="tj4-E2-LXb" id="itC-ij-DSH"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1269,9 +1303,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Help" width="19" height="19"/>
         <image name="NSActionTemplate" width="14" height="14"/>
         <image name="NSAddTemplate" width="11" height="11"/>
-        <image name="NSInfo" width="32" height="32"/>
         <image name="NSShareTemplate" width="11" height="16"/>
         <image name="Overview" width="204" height="302"/>
         <image name="Presets_Beethoven" width="168" height="168"/>

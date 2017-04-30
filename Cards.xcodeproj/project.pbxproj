@@ -11,6 +11,7 @@
 		3AC500091EA77B43006687E2 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC500061EA77B43006687E2 /* Lexer.swift */; };
 		3AC5000A1EA77B43006687E2 /* Highlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC500071EA77B43006687E2 /* Highlighter.swift */; };
 		3AC5000C1EA77B88006687E2 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC5000B1EA77B88006687E2 /* Token.swift */; };
+		4C0809E81EAF83F000835258 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0809E71EAF83F000835258 /* HelpViewController.swift */; };
 		4C1D65C51E7D9D6B009F04B8 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D65C41E7D9D6B009F04B8 /* WindowController.swift */; };
 		4C1D65C71E7DD286009F04B8 /* Hello.py in Resources */ = {isa = PBXBuildFile; fileRef = 4C1D65C61E7DD286009F04B8 /* Hello.py */; };
 		4C4F43F31E8C2157007641A8 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4F43F21E8C2157007641A8 /* TextView.swift */; };
@@ -28,7 +29,27 @@
 		4CB174A11E79344E000D333D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB174A01E79344E000D333D /* Assets.xcassets */; };
 		4CB174A41E79344E000D333D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CB174A21E79344E000D333D /* Main.storyboard */; };
 		4CCBAA021E8E2C6800D45B9B /* Playground in Resources */ = {isa = PBXBuildFile; fileRef = 4CCBAA011E8E2C6800D45B9B /* Playground */; };
+		F7427B8F1EB4B7CA00D399F1 /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7427B8E1EB4B7CA00D399F1 /* NMSSH.framework */; };
+		F7427B901EB4BBEF00D399F1 /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7427B8E1EB4B7CA00D399F1 /* NMSSH.framework */; };
+		F7427B911EB4BBEF00D399F1 /* NMSSH.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7427B8E1EB4B7CA00D399F1 /* NMSSH.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F7427B941EB4C43400D399F1 /* header.py in Resources */ = {isa = PBXBuildFile; fileRef = F7427B931EB4C43400D399F1 /* header.py */; };
+		F7E6D1C21EB495FB00E5361F /* Interpretter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E6D1C11EB495FB00E5361F /* Interpretter.swift */; };
+		F7E6D1C41EB49B9700E5361F /* pyscirpt.py in Resources */ = {isa = PBXBuildFile; fileRef = F7E6D1C31EB49B9700E5361F /* pyscirpt.py */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F7427B921EB4BBEF00D399F1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F7427B911EB4BBEF00D399F1 /* NMSSH.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3A2955711EAE101100F869BC /* program.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = program.txt; sourceTree = "<group>"; };
@@ -36,6 +57,7 @@
 		3AC500071EA77B43006687E2 /* Highlighter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Highlighter.swift; sourceTree = "<group>"; };
 		3AC500081EA77B43006687E2 /* HighligterPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = HighligterPlayground.playground; sourceTree = "<group>"; };
 		3AC5000B1EA77B88006687E2 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		4C0809E71EAF83F000835258 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpViewController.swift; path = ../HelpViewController.swift; sourceTree = "<group>"; };
 		4C1D65C41E7D9D6B009F04B8 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		4C1D65C61E7DD286009F04B8 /* Hello.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Hello.py; sourceTree = "<group>"; };
 		4C4F43F21E8C2157007641A8 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
@@ -55,6 +77,11 @@
 		4CB174A31E79344E000D333D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4CB174A51E79344E000D333D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CCBAA011E8E2C6800D45B9B /* Playground */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Playground; sourceTree = "<group>"; };
+		F7427B8E1EB4B7CA00D399F1 /* NMSSH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NMSSH.framework; sourceTree = "<group>"; };
+		F7427B931EB4C43400D399F1 /* header.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = header.py; sourceTree = "<group>"; };
+		F7E6D1C11EB495FB00E5361F /* Interpretter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpretter.swift; sourceTree = "<group>"; };
+		F7E6D1C31EB49B9700E5361F /* pyscirpt.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = pyscirpt.py; sourceTree = "<group>"; };
+		F7E6D2621EB4A4A600E5361F /* Cards-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cards-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7427B901EB4BBEF00D399F1 /* NMSSH.framework in Frameworks */,
+				F7427B8F1EB4B7CA00D399F1 /* NMSSH.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +107,14 @@
 				3AC500081EA77B43006687E2 /* HighligterPlayground.playground */,
 			);
 			name = Highlighting;
+			sourceTree = "<group>";
+		};
+		4C0809E91EAF841600835258 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				4C0809E71EAF83F000835258 /* HelpViewController.swift */,
+			);
+			name = Help;
 			sourceTree = "<group>";
 		};
 		4CAB2F991EA8F32700D02696 /* Snippets */ = {
@@ -120,17 +157,23 @@
 		4CB174961E79344E000D333D /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				F7427B8E1EB4B7CA00D399F1 /* NMSSH.framework */,
 				4CB174971E79344E000D333D /* AppDelegate.swift */,
 				4C4F43F21E8C2157007641A8 /* TextView.swift */,
 				4C1D65C41E7D9D6B009F04B8 /* WindowController.swift */,
 				4C5680291EA787DB00465500 /* WindowModel.swift */,
 				4CB174991E79344E000D333D /* ViewController.swift */,
+				F7E6D1C11EB495FB00E5361F /* Interpretter.swift */,
+				F7E6D2621EB4A4A600E5361F /* Cards-Bridging-Header.h */,
 				4CAB2F9A1EA8F33600D02696 /* Configure */,
+				4C0809E91EAF841600835258 /* Help */,
 				4CAB2F991EA8F32700D02696 /* Snippets */,
 				4CB1749B1E79344E000D333D /* Document.swift */,
 				4CB174A01E79344E000D333D /* Assets.xcassets */,
 				4CB174A21E79344E000D333D /* Main.storyboard */,
 				4C1D65C61E7DD286009F04B8 /* Hello.py */,
+				F7427B931EB4C43400D399F1 /* header.py */,
+				F7E6D1C31EB49B9700E5361F /* pyscirpt.py */,
 				4C5680251EA62AE400465500 /* sshpass */,
 				4C6798AC1E7EA46400B80CD2 /* Connect.sh */,
 				4CB174A51E79344E000D333D /* Info.plist */,
@@ -148,6 +191,7 @@
 				4CB174901E79344E000D333D /* Sources */,
 				4CB174911E79344E000D333D /* Frameworks */,
 				4CB174921E79344E000D333D /* Resources */,
+				F7427B921EB4BBEF00D399F1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -200,6 +244,8 @@
 			files = (
 				3A2955721EAE101100F869BC /* program.txt in Resources */,
 				4C5680261EA62AE400465500 /* sshpass in Resources */,
+				F7427B941EB4C43400D399F1 /* header.py in Resources */,
+				F7E6D1C41EB49B9700E5361F /* pyscirpt.py in Resources */,
 				4C6798AD1E7EA60300B80CD2 /* Connect.sh in Resources */,
 				4CB174A11E79344E000D333D /* Assets.xcassets in Resources */,
 				4C1D65C71E7DD286009F04B8 /* Hello.py in Resources */,
@@ -219,6 +265,8 @@
 				3AC5000C1EA77B88006687E2 /* Token.swift in Sources */,
 				4C1D65C51E7D9D6B009F04B8 /* WindowController.swift in Sources */,
 				4CA90A611EAA172200D63C52 /* SnippetModel.swift in Sources */,
+				4C0809E81EAF83F000835258 /* HelpViewController.swift in Sources */,
+				F7E6D1C21EB495FB00E5361F /* Interpretter.swift in Sources */,
 				3AC500091EA77B43006687E2 /* Lexer.swift in Sources */,
 				4CB1749A1E79344E000D333D /* ViewController.swift in Sources */,
 				3AC5000A1EA77B43006687E2 /* Highlighter.swift in Sources */,
@@ -342,10 +390,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = FQ4T4QU544;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Cards",
+				);
 				INFOPLIST_FILE = Cards/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/ @executable_path/../Frameworks";
+				MODULE_NAME = Cards;
 				PRODUCT_BUNDLE_IDENTIFIER = NoobLabs.Cards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Cards/Cards-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -356,10 +410,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = FQ4T4QU544;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Cards",
+				);
 				INFOPLIST_FILE = Cards/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/ @executable_path/../Frameworks";
+				MODULE_NAME = Cards;
 				PRODUCT_BUNDLE_IDENTIFIER = NoobLabs.Cards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Cards/Cards-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

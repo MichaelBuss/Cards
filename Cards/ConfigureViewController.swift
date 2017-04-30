@@ -29,6 +29,16 @@ class ConfigureViewController: NSViewController {
         configureModel.choosePreset(configureModel.chosenPreset)
         updatePreset()
         connectionEnablesInteraction()
+        
+        rotationMMOutlet.stringValue = UserDefaults.standard.string(forKey: "rotationdeg")!
+        turnDegreesOutlet.stringValue = UserDefaults.standard.string(forKey: "rotationmm")!
+        
+    }
+    @IBAction func doneAction(_ sender: NSButton) {
+        UserDefaults.standard.set(rotationMMOutlet?.stringValue, forKey: "rotationmm")
+        UserDefaults.standard.set(turnDegreesOutlet?.stringValue, forKey: "rotationdeg")
+        UserDefaults.standard.synchronize()
+        dismissViewController(self)
     }
     
     @IBAction func connectAction(_ sender: Any) {
