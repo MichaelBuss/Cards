@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A2955721EAE101100F869BC /* program.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A2955711EAE101100F869BC /* program.txt */; };
 		3AC500091EA77B43006687E2 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC500061EA77B43006687E2 /* Lexer.swift */; };
 		3AC5000A1EA77B43006687E2 /* Highlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC500071EA77B43006687E2 /* Highlighter.swift */; };
 		3AC5000C1EA77B88006687E2 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC5000B1EA77B88006687E2 /* Token.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A2955711EAE101100F869BC /* program.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = program.txt; sourceTree = "<group>"; };
 		3AC500061EA77B43006687E2 /* Lexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lexer.swift; sourceTree = "<group>"; };
 		3AC500071EA77B43006687E2 /* Highlighter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Highlighter.swift; sourceTree = "<group>"; };
 		3AC500081EA77B43006687E2 /* HighligterPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = HighligterPlayground.playground; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 		3AC500051EA77B2B006687E2 /* Highlighting */ = {
 			isa = PBXGroup;
 			children = (
+				3A2955711EAE101100F869BC /* program.txt */,
 				3AC5000B1EA77B88006687E2 /* Token.swift */,
 				3AC500061EA77B43006687E2 /* Lexer.swift */,
 				3AC500071EA77B43006687E2 /* Highlighter.swift */,
@@ -195,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A2955721EAE101100F869BC /* program.txt in Resources */,
 				4C5680261EA62AE400465500 /* sshpass in Resources */,
 				4C6798AD1E7EA60300B80CD2 /* Connect.sh in Resources */,
 				4CB174A11E79344E000D333D /* Assets.xcassets in Resources */,

@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController, NSTextStorageDelegate {
+class ViewController: NSViewController, NSTextStorageDelegate, NSTextViewDelegate {
     @IBOutlet var textViewOutlet: NSTextView!
     let document = Document()
 
@@ -27,7 +27,7 @@ class ViewController: NSViewController, NSTextStorageDelegate {
         }
     }
     
-    func textStorage(_ textStorage: NSTextStorage, willProcessEditing editedMask: NSTextStorageEditActions, range editedRange: NSRange, changeInLength delta: Int) {
+    func textStorage(_ textStorage: NSTextStorage, didProcessEditing editedMask: NSTextStorageEditActions, range editedRange: NSRange, changeInLength delta: Int) {
         let h = Highlighter(str: textStorage.string, ats: textStorage)
         let _ = h.getHighlightedString()
     }
