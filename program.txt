@@ -1,0 +1,48 @@
+Frem: 10 cm
+Højttaler: Hello
+
+Ny Funktion: Væg og bak (
+        Frem: til kontakt
+        Tilbage: 5 cm
+)
+
+Funktion: Væg og bak
+Drej: 90 grader mod højre
+Frem: til væg
+
+Gentag: 3 gange (
+        Drej: 40 grader mod højre
+        Højttaler: Right
+        Drej: 10 grader mod højre
+        Højttaler: Left
+)
+
+Frem: til kontakt
+Hvis:
+        Farve == rød (
+                Motor A: mod højre
+        )
+        Farve == sort (
+                Motor A: mod venstre
+        )
+
+Tilbage: 5 cm
+Drej: 90 grader venstre
+
+Gentag: til kontakt (
+Hvis:
+        Farve == rød || Afstand < 20 cm (
+                Brems
+        )
+Ellers: Frem
+)
+
+Tilbage: 5 cm
+Drej: venstre
+Tilbage: 1 sekund
+
+Frem: til kontakt
+Gem: Banelængde = Seneste Motor B cm
+Tilbage: 5 cm
+Drej: 90 grader mod venstre
+Frem: Banelængde

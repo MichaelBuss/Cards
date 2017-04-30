@@ -124,7 +124,7 @@ public class Lexer {
                 while cur_idx < end &&
                     (isAlpha(char: chars[cur_idx]) || isSpace(char: chars[cur_idx]) ) { cur_idx += 1 }
                 let end_idx = stripTrailingSpaces(idx: cur_idx-1)
-                out.append(Token.word(String(chars[start_idx...end_idx]), start_idx, cur_idx-start_idx))
+                out.append(Token.word(String(chars[start_idx...end_idx]).lowercased(), start_idx, end_idx-start_idx+1))
                 
             default:
                 throw LexerError.UnknownInput("Lexer didn't recognize input character \(chars[cur_idx]) at \(cur_idx)")
