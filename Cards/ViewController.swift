@@ -8,10 +8,13 @@
 
 import Cocoa
 
+//protocol ViewControllerDelegate: class {
+//    func textFieldContains(viewController: ViewController)
+//}
+
 class ViewController: NSViewController, NSTextStorageDelegate, NSTextViewDelegate {
     @IBOutlet var textViewOutlet: NSTextView!
     let document = Document()
-
     
     override func viewDidLoad() {
         // Do any additional setup after loading the view.
@@ -35,6 +38,7 @@ class ViewController: NSViewController, NSTextStorageDelegate, NSTextViewDelegat
     func insertSnippet(snippet: String){
         textViewOutlet.insertText(snippet, replacementRange: NSMakeRange(4, 0))
     }
+    
 
 }
 

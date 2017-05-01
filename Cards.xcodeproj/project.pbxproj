@@ -15,12 +15,10 @@
 		4C1D65C51E7D9D6B009F04B8 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D65C41E7D9D6B009F04B8 /* WindowController.swift */; };
 		4C1D65C71E7DD286009F04B8 /* Hello.py in Resources */ = {isa = PBXBuildFile; fileRef = 4C1D65C61E7DD286009F04B8 /* Hello.py */; };
 		4C4F43F31E8C2157007641A8 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4F43F21E8C2157007641A8 /* TextView.swift */; };
-		4C5680261EA62AE400465500 /* sshpass in Resources */ = {isa = PBXBuildFile; fileRef = 4C5680251EA62AE400465500 /* sshpass */; };
 		4C5680281EA62BE700465500 /* ConfigureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5680271EA62BE700465500 /* ConfigureModel.swift */; };
 		4C56802A1EA787DB00465500 /* WindowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5680291EA787DB00465500 /* WindowModel.swift */; };
 		4C56802C1EA7946F00465500 /* SnippetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C56802B1EA7946F00465500 /* SnippetViewController.swift */; };
 		4C6798AB1E7E9DB300B80CD2 /* ConfigureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6798AA1E7E9DB300B80CD2 /* ConfigureViewController.swift */; };
-		4C6798AD1E7EA60300B80CD2 /* Connect.sh in Resources */ = {isa = PBXBuildFile; fileRef = 4C6798AC1E7EA46400B80CD2 /* Connect.sh */; };
 		4CA90A611EAA172200D63C52 /* SnippetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA90A601EAA172200D63C52 /* SnippetModel.swift */; };
 		4CAB2F961EA7A51200D02696 /* SnippetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAB2F951EA7A51200D02696 /* SnippetCell.swift */; };
 		4CB174981E79344E000D333D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB174971E79344E000D333D /* AppDelegate.swift */; };
@@ -29,7 +27,6 @@
 		4CB174A11E79344E000D333D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB174A01E79344E000D333D /* Assets.xcassets */; };
 		4CB174A41E79344E000D333D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CB174A21E79344E000D333D /* Main.storyboard */; };
 		4CCBAA021E8E2C6800D45B9B /* Playground in Resources */ = {isa = PBXBuildFile; fileRef = 4CCBAA011E8E2C6800D45B9B /* Playground */; };
-		F7427B8F1EB4B7CA00D399F1 /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7427B8E1EB4B7CA00D399F1 /* NMSSH.framework */; };
 		F7427B901EB4BBEF00D399F1 /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7427B8E1EB4B7CA00D399F1 /* NMSSH.framework */; };
 		F7427B911EB4BBEF00D399F1 /* NMSSH.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7427B8E1EB4B7CA00D399F1 /* NMSSH.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F7427B941EB4C43400D399F1 /* header.py in Resources */ = {isa = PBXBuildFile; fileRef = F7427B931EB4C43400D399F1 /* header.py */; };
@@ -61,12 +58,10 @@
 		4C1D65C41E7D9D6B009F04B8 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		4C1D65C61E7DD286009F04B8 /* Hello.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Hello.py; sourceTree = "<group>"; };
 		4C4F43F21E8C2157007641A8 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
-		4C5680251EA62AE400465500 /* sshpass */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = sshpass; sourceTree = "<group>"; };
 		4C5680271EA62BE700465500 /* ConfigureModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConfigureModel.swift; path = ../ConfigureModel.swift; sourceTree = "<group>"; };
 		4C5680291EA787DB00465500 /* WindowModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WindowModel.swift; path = ../WindowModel.swift; sourceTree = "<group>"; };
 		4C56802B1EA7946F00465500 /* SnippetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnippetViewController.swift; sourceTree = "<group>"; };
 		4C6798AA1E7E9DB300B80CD2 /* ConfigureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigureViewController.swift; sourceTree = "<group>"; };
-		4C6798AC1E7EA46400B80CD2 /* Connect.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Connect.sh; sourceTree = "<group>"; };
 		4CA90A601EAA172200D63C52 /* SnippetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnippetModel.swift; path = ../SnippetModel.swift; sourceTree = "<group>"; };
 		4CAB2F951EA7A51200D02696 /* SnippetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnippetCell.swift; sourceTree = "<group>"; };
 		4CB174941E79344E000D333D /* Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,7 +85,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7427B901EB4BBEF00D399F1 /* NMSSH.framework in Frameworks */,
-				F7427B8F1EB4B7CA00D399F1 /* NMSSH.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,8 +168,6 @@
 				4C1D65C61E7DD286009F04B8 /* Hello.py */,
 				F7427B931EB4C43400D399F1 /* header.py */,
 				F7E6D1C31EB49B9700E5361F /* pyscirpt.py */,
-				4C5680251EA62AE400465500 /* sshpass */,
-				4C6798AC1E7EA46400B80CD2 /* Connect.sh */,
 				4CB174A51E79344E000D333D /* Info.plist */,
 			);
 			path = Cards;
@@ -209,7 +201,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = NoobLabs;
 				TargetAttributes = {
 					4CB174931E79344E000D333D = {
@@ -243,10 +235,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A2955721EAE101100F869BC /* program.txt in Resources */,
-				4C5680261EA62AE400465500 /* sshpass in Resources */,
 				F7427B941EB4C43400D399F1 /* header.py in Resources */,
 				F7E6D1C41EB49B9700E5361F /* pyscirpt.py in Resources */,
-				4C6798AD1E7EA60300B80CD2 /* Connect.sh in Resources */,
 				4CB174A11E79344E000D333D /* Assets.xcassets in Resources */,
 				4C1D65C71E7DD286009F04B8 /* Hello.py in Resources */,
 				4CB174A41E79344E000D333D /* Main.storyboard in Resources */,

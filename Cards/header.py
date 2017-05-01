@@ -64,11 +64,17 @@ def brake():
 	mC.stop(stop_action="brake")
 
 
-def turn(unit ="degrees" ,amount=90, speed=50, direction=1):
+def turn(unit ="degrees", amount=90, speed=50, direction=1):
 	if unit == "degrees":
-		speed = speed*10 # Because ev3dev motors gros from -1000 to +1000
+		speed = speed*10 # Because ev3dev motors goes from -1000 to +1000
 		# run_to_rel_pos is the only one that don't react to negative speed, thus *direction on position instead
 		mB.run_to_rel_pos(position_sp=amount*turnRatio*direction, speed_sp=speed, stop_action="brake")
 		mC.run_to_rel_pos(position_sp=amount*turnRatio*-direction, speed_sp=speed, stop_action="brake")
 		mB.wait_while('running')
 		mC.wait_while('running')
+
+def singleMotor(unit="rotations", amount=1, speed=50, direction=1):
+    if unit == "rotations":
+        speed = speed*10
+        mA.run_to_rel_pos(position_sp=amount*turnRatio*direction*360, speed_sp=speed, stop_action="brake")
+        mA.wait_while('running')

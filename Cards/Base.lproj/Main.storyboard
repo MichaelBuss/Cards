@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F67a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="12062"/>
@@ -811,8 +811,8 @@
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="Ckk-yw-fiv">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <rect key="contentRect" x="600" y="400" width="480" height="500"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
                         <value key="minSize" type="size" width="360" height="270"/>
                         <toolbar key="toolbar" implicitIdentifier="0F3D09B7-8ADF-4201-88C0-B3CD801E86EA" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="sAw-Ee-VkL">
                             <allowedToolbarItems>
@@ -931,6 +931,17 @@
                     <touchBar key="touchBar" id="4QC-m3-gKc">
                         <touchBarItems>
                             <colorPickerItem showsAlpha="NO" id="01t-ms-7S3"/>
+                            <touchBarItem id="IzU-Jo-KzO">
+                                <viewController key="viewController" id="KU2-r4-bRh">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BWB-Vz-nNc">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="Run" imagePosition="overlaps" alignment="center" alternateImage="Stop" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WYL-Ph-cWf">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                        </buttonCell>
+                                    </button>
+                                </viewController>
+                            </touchBarItem>
                         </touchBarItems>
                     </touchBar>
                     <connections>
@@ -944,7 +955,7 @@
                 <customObject id="6f7-a7-6o1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="ydl-eY-ccY"/>
             </objects>
-            <point key="canvasLocation" x="74" y="281"/>
+            <point key="canvasLocation" x="74" y="127"/>
         </scene>
         <!--Configure View Controller-->
         <scene sceneID="9Bq-4k-O3v">
@@ -967,7 +978,7 @@
                                         <rect key="frame" x="40" y="55" width="375" height="110"/>
                                         <subviews>
                                             <stackView distribution="fill" orientation="horizontal" alignment="firstBaseline" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qTG-qV-fZa">
-                                                <rect key="frame" x="82" y="89" width="212" height="21"/>
+                                                <rect key="frame" x="81.5" y="89" width="212" height="21"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOM-T2-bcV">
                                                         <rect key="frame" x="-2" y="3" width="97" height="17"/>
@@ -1006,7 +1017,7 @@
                                                 </customSpacing>
                                             </stackView>
                                             <stackView distribution="fill" orientation="horizontal" alignment="firstBaseline" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uC0-bN-uKz">
-                                                <rect key="frame" x="82" y="60" width="212" height="21"/>
+                                                <rect key="frame" x="81.5" y="60" width="212" height="21"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMl-6i-JFa">
                                                         <rect key="frame" x="-2" y="3" width="97" height="17"/>
@@ -1045,7 +1056,7 @@
                                                 </customSpacing>
                                             </stackView>
                                             <stackView distribution="fill" orientation="horizontal" alignment="firstBaseline" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jmb-Xl-55p">
-                                                <rect key="frame" x="8" y="30" width="360" height="22"/>
+                                                <rect key="frame" x="7.5" y="30" width="360" height="22"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaB-Ic-hBc">
                                                         <rect key="frame" x="-2" y="3" width="171" height="17"/>
@@ -1087,7 +1098,7 @@
                                                 </customSpacing>
                                             </stackView>
                                             <stackView distribution="fill" orientation="horizontal" alignment="firstBaseline" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iVK-UT-3H9">
-                                                <rect key="frame" x="8" y="0.0" width="360" height="22"/>
+                                                <rect key="frame" x="7.5" y="0.0" width="360" height="22"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZP-Xb-Igx">
                                                         <rect key="frame" x="-2" y="3" width="171" height="17"/>
@@ -1310,5 +1321,6 @@
         <image name="Overview" width="204" height="302"/>
         <image name="Presets_Beethoven" width="168" height="168"/>
         <image name="Run" width="19" height="19"/>
+        <image name="Stop" width="19" height="19"/>
     </resources>
 </document>

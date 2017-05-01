@@ -233,14 +233,14 @@ class Interpretter: NSObject {
         return argument
     }
     
-    private func motorACommand(argument: String) -> String {
+    private func singleMotorCommand(argument: String) -> String {
         if argument.contains("rotation") {
             let dist = splitAtFirstOccurence(str: argument, separator: " ")[0]
             if argument.contains("frem") {
-                return "\nmotorA(rotations="+dist+", direction=1)\n"
+                return "\nsingleMotor(unit=\"rotation\", amount="+dist+", speed=50, direction=1)\n"
             }
             else {
-                return "\nmotorA(rotations="+dist+", direction=-1)\n"
+                return "\nsingleMotor(unit=\"rotation\", amount="+dist+", speed=50, direction=-1)\n"
             }
         }
         
@@ -390,11 +390,11 @@ class Interpretter: NSObject {
                     
                     trimmedCode = split[1].trimmingCharacters(in: .whitespacesAndNewlines)
                     
-                case "motora":
+                case "motor A":
                     //Splitting string at newline
                     split = splitAtFirstOccurence(str: rest, separator: "\n")
                     
-                    mainBody += motorACommand(argument: split[0])
+                    mainBody += singleMotorCommand(argument: split[0])
                     
                     trimmedCode = split[1].trimmingCharacters(in: .whitespacesAndNewlines)
                     

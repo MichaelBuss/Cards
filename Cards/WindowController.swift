@@ -24,7 +24,7 @@ class WindowController: NSWindowController, SnippetViewControllerDelegate {
     override func windowDidLoad() {
         super.windowDidLoad()
         statusTextFieldOutlet.isSelectable = false
-        statusTextFieldOutlet.stringValue = "Connect to Robot 🤖 via Bluetooth ⚠️"
+        statusTextFieldOutlet.stringValue = "Skriv noget kode 👩‍💻👨‍💻"
         
         
         
@@ -38,11 +38,11 @@ class WindowController: NSWindowController, SnippetViewControllerDelegate {
         let viewCtrl: ViewController = self.contentViewController as! ViewController
         
         runOutlet.image = #imageLiteral(resourceName: "Stop")
-        statusTextFieldOutlet.stringValue = "Compiling..."
+        statusTextFieldOutlet.stringValue = "Overfører...⏳"
         windowModel.runPython(code: viewCtrl.textViewOutlet.string!, compiled: {
-            self.statusTextOutlet.stringValue = "Robot is running 🤖"
+            self.statusTextOutlet.stringValue = "Robotten kører 🤖"
         }, finished: {
-            self.statusTextOutlet.stringValue = "Finished running"
+            self.statusTextOutlet.stringValue = "Færdig 🙌"
             self.runOutlet.image = #imageLiteral(resourceName: "Run")
         })
         

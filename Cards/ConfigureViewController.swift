@@ -42,11 +42,6 @@ class ConfigureViewController: NSViewController {
     }
     
     @IBAction func connectAction(_ sender: Any) {
-        let path = "/bin/sh" //Path
-        let arguments = [Bundle.main.path(forResource: "sshpass", ofType: "")]
-        
-        let task = Process.launchedProcess(launchPath: path, arguments: arguments as! [String])
-        task.waitUntilExit()
         connectionEnablesInteraction()
     }
     
