@@ -12,16 +12,22 @@ import AppKit
 public class Highlighter {
     let tokens: [Token]
     let len: Int
-    let str: String
     var i: Int
     var idents: [String]
     var ats: NSMutableAttributedString
-    
+
+    public init(ats: NSMutableAttributedString, tokens: [Token]) {
+        self.ats = ats
+        self.tokens = tokens
+        idents = [String]()
+        len = tokens.count
+        i=0
+    }
+
     public init(str: String, ats: NSMutableAttributedString) {
         self.ats = ats
         let lexer = Lexer(str: str)
         idents = [String]()
-        self.str = str
         do {
             tokens = try lexer.lex()
             len = tokens.count
@@ -77,7 +83,7 @@ public class Highlighter {
     
     static let ident_def = ["gem", "ny funktion"]
     static let keywords = ["gentag", "hvis", "ellers", "funktion"]
-    static let funcs = ["frem", "tilbage", "drej", "højttaler", "brems", "motor a", "motor b"]
+    static let funcs = ["frem", "tilbage", "drej", "højtaler", "brems", "motor a", "motor b"]
     static let color_consts = [
         "rød": (Highlighter.ayu["keyword"], NSColor.white),
         "grøn": (Highlighter.ayu["string"], NSColor.white),
@@ -109,6 +115,19 @@ public class Highlighter {
         while i<len {
             switch tokens[i] {
             case .word(let w, let idx, var l):
+                /*for (k, v) in Highlighter.replace {
+                    if let idx = w.range(of:k) {
+                        w = w.substring(to: idx.lowerBound) + v + w.substring(from: idx.upperBound)
+                        l -= k.characters.count - v.characters.count
+                        let start = w.distance(from: w.startIndex, to: idx.lowerBound)
+                        let dist = w.distance(from: idx.lowerBound, to: w.index(idx.upperBound, offsetBy: -1))
+                        
+                        ats.replaceCharacters(in: NSMakeRange(start, dist), with: v)
+                        break
+                    }
+                }*/
+                
+                
                 var col = NSColor.black
                 var background = NSColor.white
                 if i<len-1 && Highlighter.ident_def.contains(w) {
@@ -143,8 +162,8 @@ public class Highlighter {
             case .int(_, let idx, var l):
                 if i<len-1 {
                     switch tokens[i+1] {
-                    case .word(let w, _, let len):
-                        l += len + 1
+                    case .word(_, _, let wordLength):
+                        l += wordLength + 1
                         i += 1
                     default:
                         print("Invalid identifier found")
