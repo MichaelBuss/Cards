@@ -16,7 +16,8 @@ class SmartReplacer {
             "større": (["end"], ">"),
             "mindre": (["end"], "<"),
             "lig": (["med"], "=="),
-            ">": (["||", "=="], ">=")
+            ">": (["||", "=="], ">="),
+            "<": (["||", "=="], ">=")
     ]
 
     public init(ats: NSMutableAttributedString, sel: NSTextView) {
