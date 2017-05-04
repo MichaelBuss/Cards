@@ -8,12 +8,18 @@
 
 import Cocoa
 
+protocol WindowControllerDelegate: class {
+    func textViewChanged(windowController: WindowController)
+}
+
 class WindowController: NSWindowController, SnippetViewControllerDelegate {
 //    Outlets
     @IBOutlet weak var runOutlet: NSButton!
     @IBOutlet weak var statusOutlet: NSToolbarItem!
     @IBOutlet weak var statusTextOutlet: NSTextFieldCell!
     @IBOutlet weak var statusTextFieldOutlet: NSTextField!
+    
+    weak var delegate: WindowControllerDelegate?
     
 //    Variables
     
@@ -43,6 +49,9 @@ class WindowController: NSWindowController, SnippetViewControllerDelegate {
             self.statusTextOutlet.stringValue = "Robotten kører 🤖"
         }, finished: {
             self.statusTextOutlet.stringValue = "Færdig 🙌"
+            self.runOutlet.image = #imageLiteral(resourceName: "Run")
+        }, failed: {
+            self.statusTextOutlet.stringValue = "Fejl"
             self.runOutlet.image = #imageLiteral(resourceName: "Run")
         })
         

@@ -11,6 +11,7 @@
 		3AC500091EA77B43006687E2 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC500061EA77B43006687E2 /* Lexer.swift */; };
 		3AC5000A1EA77B43006687E2 /* Highlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC500071EA77B43006687E2 /* Highlighter.swift */; };
 		3AC5000C1EA77B88006687E2 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC5000B1EA77B88006687E2 /* Token.swift */; };
+		3C7B92CBE69554CBA7B504AC /* SmartReplacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B92D04D55494BEBCE945B /* SmartReplacer.swift */; };
 		4C0809E81EAF83F000835258 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0809E71EAF83F000835258 /* HelpViewController.swift */; };
 		4C1D65C51E7D9D6B009F04B8 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D65C41E7D9D6B009F04B8 /* WindowController.swift */; };
 		4C1D65C71E7DD286009F04B8 /* Hello.py in Resources */ = {isa = PBXBuildFile; fileRef = 4C1D65C61E7DD286009F04B8 /* Hello.py */; };
@@ -54,6 +55,7 @@
 		3AC500071EA77B43006687E2 /* Highlighter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Highlighter.swift; sourceTree = "<group>"; };
 		3AC500081EA77B43006687E2 /* HighligterPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = HighligterPlayground.playground; sourceTree = "<group>"; };
 		3AC5000B1EA77B88006687E2 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		3C7B92D04D55494BEBCE945B /* SmartReplacer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartReplacer.swift; sourceTree = "<group>"; };
 		4C0809E71EAF83F000835258 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelpViewController.swift; path = ../HelpViewController.swift; sourceTree = "<group>"; };
 		4C1D65C41E7D9D6B009F04B8 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		4C1D65C61E7DD286009F04B8 /* Hello.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = Hello.py; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				3AC500061EA77B43006687E2 /* Lexer.swift */,
 				3AC500071EA77B43006687E2 /* Highlighter.swift */,
 				3AC500081EA77B43006687E2 /* HighligterPlayground.playground */,
+				3C7B92D04D55494BEBCE945B /* SmartReplacer.swift */,
 			);
 			name = Highlighting;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				4C56802A1EA787DB00465500 /* WindowModel.swift in Sources */,
 				4C5680281EA62BE700465500 /* ConfigureModel.swift in Sources */,
 				4C6798AB1E7E9DB300B80CD2 /* ConfigureViewController.swift in Sources */,
+				3C7B92CBE69554CBA7B504AC /* SmartReplacer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

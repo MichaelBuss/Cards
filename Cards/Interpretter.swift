@@ -15,7 +15,9 @@ struct CompileSettings {
 
 class Interpretter: NSObject {
     
-    public static func compile(code: String, settings: CompileSettings) -> String {
+    var errors: [String]
+    
+    public static func compile(code: String, settings: CompileSettings) -> (String, [String]) {
         
         do {
             let path = Bundle.main.path(forResource: "header", ofType: "py")
@@ -25,11 +27,20 @@ class Interpretter: NSObject {
             header = header.replacingOccurrences(of: "{rotationdeg}", with: settings.rotationdeg)
             
             let interpretter = Interpretter()
-            return header + interpretter.convertToPython(code: code)
+            let code = header + interpretter.convertToPython(code: code)
+            let errors = interpretter.errors
+            return (code, errors)
         } catch _ {
             print("Could not find header file")
         }
-        return ""
+        return ("", Array())
+    }
+    
+    
+    
+    
+    public override init() {
+        errors = ["test"]
     }
     
     enum CustomError : Error {
@@ -146,6 +157,7 @@ class Interpretter: NSObject {
             return modifier+"ts.value()"
         }
         print("An error occured. Condition "+condition+" unknown.")
+        errors.append("An error occured. Condition "+condition+" unknown.")
         return condition
     }
     
@@ -161,6 +173,7 @@ class Interpretter: NSObject {
         }
         
         print("An error occured. Condition "+condition+" unknown.")
+        errors.append("An error occured. Condition "+condition+" unknown.")
         return condition
     }
     
@@ -205,6 +218,7 @@ class Interpretter: NSObject {
             return "\nwhile not ts.value():\n"+indent(code: "drive(unit=\"forever\", direction=-1)")+"break()\n"
         }
         print("An error occured. Argument "+argument+" unknown.")
+        errors.append("An error occured. Argument "+argument+" unknown.")
         return argument
     }
     
@@ -230,6 +244,7 @@ class Interpretter: NSObject {
             return "\nwhile not ts.value():\n"+indent(code: "\ndrive(unit=\"forever\")")+"break()\n"
         }
         print("An error occured. Argument "+argument+" unknown.")
+        errors.append("An error occured. Argument "+argument+" unknown.")
         return argument
     }
     
@@ -245,6 +260,7 @@ class Interpretter: NSObject {
         }
         
         print("An error occured. Argument "+argument+" unknown.")
+        errors.append("An error occured. Argument "+argument+" unknown.")
         return argument
     }
     
@@ -280,6 +296,7 @@ class Interpretter: NSObject {
                         try split = extractGroup(codeSnippet: "("+split[1])
                     } catch {
                         print("Bad formatting")
+                        errors.append("Bad formatting")
                     }
                     
                     //The code that the if-statement decides is converted to Python recursively and added
@@ -300,6 +317,7 @@ class Interpretter: NSObject {
                         try split = extractGroup(codeSnippet: "("+split[1])
                     } catch {
                         print("Bad formatting")
+                        errors.append("Bad formatting")
                     }
                     
                     //The code that the if-statement decides is converted to Python recursively and added
@@ -320,6 +338,7 @@ class Interpretter: NSObject {
                         try split = extractGroup(codeSnippet: "("+split[1])
                     } catch {
                         print("Bad formatting")
+                        errors.append("Bad formatting")
                     }
                     
                     //The code that the if-statement decides is converted to Python recursively and added
@@ -340,6 +359,7 @@ class Interpretter: NSObject {
                         try split = extractGroup(codeSnippet: "("+split[1])
                     } catch {
                         print("Bad formatting")
+                        errors.append("Bad formatting")
                     }
                     
                     //The code that the if-statement decides is converted to Python recursively and added
@@ -418,6 +438,7 @@ class Interpretter: NSObject {
                         try split = extractGroup(codeSnippet: "("+split[1])
                     } catch {
                         print("Bad formatting")
+                        errors.append("Bad formatting")
                     }
                     
                     //The code that the if-statement decides is converted to Python recursively and added

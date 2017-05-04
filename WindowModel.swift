@@ -9,7 +9,7 @@
 import Foundation
 
 struct WindowModel {
-    func runPython(code: String, compiled:@escaping (() -> Void), finished:@escaping (() -> Void)){
+    func runPython(code: String, compiled:@escaping (() -> Void), finished:@escaping (() -> Void), failed:@escaping (() -> Void)){
         
         
         /*
@@ -36,42 +36,48 @@ struct WindowModel {
             let rotdeg = UserDefaults.standard.string(forKey: "rotationdeg")!
             
             let settings = CompileSettings(rotationmm: rotmm, rotationdeg: rotdeg)
-            let pyCode = Interpretter.compile(code: code, settings: settings)
+            let (pyCode, errors) = Interpretter.compile(code: code, settings: settings)
             
-            do {
-                try pyCode.write(toFile: "pyscript.py", atomically: true, encoding: String.Encoding.utf8)
-            } catch _ {
-                print("Could not save code to disk")
-            }
+            if errors.isEmpty {
+
             
-            
-            let session = NMSSHSession.connect(toHost: "ev3dev.local", withUsername: "robot")
-            
-            if (session?.isConnected)! {
-                session?.authenticate(byPassword: "maker")
-            }
-            
-            if (session?.isAuthorized)! {
                 do {
-                    let response = session?.channel.uploadFile("./pyscript.py", to: "runner.py")
-                    print(response ?? "")
-                    DispatchQueue.main.async {
-                        compiled();
-                    }
-                    let res = try session?.channel.execute("chmod +x runner.py")
-                    print(res ?? "")
-                    try session?.channel.execute("python3 runner.py")
-                    
+                    try pyCode.write(toFile: "pyscript.py", atomically: true, encoding: String.Encoding.utf8)
                 } catch _ {
-                    print("Failed to send to machine")
+                    print("Could not save code to disk")
                 }
-            }
             
-            DispatchQueue.main.async {
-                finished();
-            }
             
-            session?.disconnect()
+                let session = NMSSHSession.connect(toHost: "ev3dev.local", withUsername: "robot")
+            
+                if (session?.isConnected)! {
+                    session?.authenticate(byPassword: "maker")
+                }
+            
+                if (session?.isAuthorized)! {
+                    do {
+                        let response = session?.channel.uploadFile("./pyscript.py", to: "runner.py")
+                        print(response ?? "")
+                        DispatchQueue.main.async {
+                            compiled();
+                        }
+                        let res = try session?.channel.execute("chmod +x runner.py")
+                        print(res ?? "")
+                        let pid = try session?.channel.execute("python3 runner.py &")
+                    
+                    } catch _ {
+                        print("Failed to send to machine")
+                    }
+                }
+            
+                DispatchQueue.main.async {
+                    finished();
+                }
+            
+                session?.disconnect()
+            } else {
+                failed()
+            }
         }
 
     }

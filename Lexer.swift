@@ -51,7 +51,7 @@ public class Lexer {
     }
     
     private func isWhiteSpace(char: Character) -> Bool {
-        return Array(" \n\t".characters).contains(char)
+        return Array(" \n\t\u{00A0}".characters).contains(char)
     }
     
     private func expectNext(char: Character, input: [Character], idx: Int) -> Bool {
@@ -127,6 +127,7 @@ public class Lexer {
                 out.append(Token.word(String(chars[start_idx...end_idx]).lowercased(), start_idx, end_idx-start_idx+1))
                 
             default:
+                print("Lexer didn't recognize input character \(chars[cur_idx]) at \(cur_idx)")
                 throw LexerError.UnknownInput("Lexer didn't recognize input character \(chars[cur_idx]) at \(cur_idx)")
             }
             eatWhiteSpace()
