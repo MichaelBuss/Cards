@@ -9,7 +9,7 @@
 import Cocoa
 
 class Document: NSDocument {
-    var content:String = "Davs"
+    var content:String = "" //Davs. String to be inseerted when starting from blank
 
     
     

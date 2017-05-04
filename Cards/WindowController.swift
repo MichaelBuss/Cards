@@ -79,9 +79,9 @@ class WindowController: NSWindowController, SnippetViewControllerDelegate {
         if let position = viewCtrl.textViewOutlet.selectedRanges.first?.rangeValue.location {
             let pos = nextLineBreak(text: text!, position: position)
             
-            text = text?.insert(string: "\n\(snippet.title)", ind: pos)
+            text = text?.insert(string: "\n\(snippet.standard)", ind: pos)
         } else {
-            text?.append("\n\(snippet.title)")
+            text?.append("\n\(snippet.standard)")
         }
         
         viewCtrl.textViewOutlet.string = text
