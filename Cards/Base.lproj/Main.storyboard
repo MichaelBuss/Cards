@@ -962,7 +962,7 @@
             <objects>
                 <viewController id="tj4-E2-LXb" customClass="ConfigureViewController" customModule="Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <splitView key="view" arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" id="3ZT-Ev-o0d">
-                        <rect key="frame" x="0.0" y="0.0" width="660" height="406"/>
+                        <rect key="frame" x="0.0" y="0.0" width="730" height="406"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" id="yxz-Am-xDW">
@@ -971,25 +971,25 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Overview" id="X0J-86-0Ku"/>
                             </imageView>
                             <view id="dXT-jI-o4D">
-                                <rect key="frame" x="205" y="0.0" width="455" height="406"/>
+                                <rect key="frame" x="205" y="0.0" width="525" height="406"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ulu-mJ-CI9">
-                                        <rect key="frame" x="40" y="55" width="375" height="110"/>
+                                        <rect key="frame" x="40" y="55" width="445" height="110"/>
                                         <subviews>
                                             <stackView distribution="fill" orientation="horizontal" alignment="firstBaseline" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qTG-qV-fZa">
-                                                <rect key="frame" x="81.5" y="89" width="212" height="21"/>
+                                                <rect key="frame" x="81.5" y="89" width="282" height="21"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOM-T2-bcV">
-                                                        <rect key="frame" x="-2" y="3" width="97" height="17"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Choose Preset:" id="bAd-Ec-3uy">
+                                                        <rect key="frame" x="-2" y="3" width="131" height="17"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Forudindstillet robot:" id="bAd-Ec-3uy">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
                                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qRg-Ob-7Ov">
-                                                        <rect key="frame" x="99" y="-3" width="116" height="26"/>
+                                                        <rect key="frame" x="133" y="-3" width="152" height="26"/>
                                                         <popUpButtonCell key="cell" type="push" title="Neutral" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="xjj-La-U1j" id="Owb-SJ-cQX">
                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="menu"/>
@@ -1017,18 +1017,18 @@
                                                 </customSpacing>
                                             </stackView>
                                             <stackView distribution="fill" orientation="horizontal" alignment="firstBaseline" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uC0-bN-uKz">
-                                                <rect key="frame" x="81.5" y="60" width="212" height="21"/>
+                                                <rect key="frame" x="81.5" y="60" width="282" height="21"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMl-6i-JFa">
-                                                        <rect key="frame" x="-2" y="3" width="97" height="17"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Driving Motors:" id="cWl-6c-rOE">
+                                                        <rect key="frame" x="-2" y="3" width="131" height="17"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Drivende motorer:" id="cWl-6c-rOE">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
                                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JY4-Tq-bRy">
-                                                        <rect key="frame" x="99" y="-3" width="116" height="26"/>
+                                                        <rect key="frame" x="133" y="-3" width="152" height="26"/>
                                                         <popUpButtonCell key="cell" type="push" title="B &amp; C" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="4T3-QY-zVG" id="3bP-FC-sh0">
                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="menu"/>
@@ -1056,18 +1056,18 @@
                                                 </customSpacing>
                                             </stackView>
                                             <stackView distribution="fill" orientation="horizontal" alignment="firstBaseline" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jmb-Xl-55p">
-                                                <rect key="frame" x="7.5" y="30" width="360" height="22"/>
+                                                <rect key="frame" x="43.5" y="30" width="358" height="22"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaB-Ic-hBc">
-                                                        <rect key="frame" x="-2" y="3" width="171" height="17"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="⬆️ 0ne rotation in mm:" id="bB7-xc-P4d">
+                                                        <rect key="frame" x="-2" y="3" width="169" height="17"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="⬆️ En rotation som mm:" id="bB7-xc-P4d">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hrb-67-1H5">
-                                                        <rect key="frame" x="175" y="0.0" width="40" height="22"/>
+                                                        <rect key="frame" x="173" y="0.0" width="40" height="22"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="40" id="4w3-AI-2oh"/>
                                                         </constraints>
@@ -1079,7 +1079,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="C4b-gK-dFx">
-                                                        <rect key="frame" x="217" y="-7" width="149" height="32"/>
+                                                        <rect key="frame" x="215" y="-7" width="149" height="32"/>
                                                         <buttonCell key="cell" type="push" title="Drive one rotation" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dWI-Cz-W5T">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
@@ -1098,18 +1098,18 @@
                                                 </customSpacing>
                                             </stackView>
                                             <stackView distribution="fill" orientation="horizontal" alignment="firstBaseline" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iVK-UT-3H9">
-                                                <rect key="frame" x="7.5" y="0.0" width="360" height="22"/>
+                                                <rect key="frame" x="43.5" y="0.0" width="358" height="22"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZP-Xb-Igx">
-                                                        <rect key="frame" x="-2" y="3" width="171" height="17"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="🔄 0ne rotation in degrees:" id="wGe-Bd-grs">
+                                                        <rect key="frame" x="-2" y="3" width="169" height="17"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="🔄 En rotation som grader:" id="wGe-Bd-grs">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kj-r3-bHm">
-                                                        <rect key="frame" x="175" y="0.0" width="40" height="22"/>
+                                                        <rect key="frame" x="173" y="0.0" width="40" height="22"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="40" id="MF6-kw-wnt"/>
                                                         </constraints>
@@ -1121,7 +1121,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="feu-ZW-jRY">
-                                                        <rect key="frame" x="217" y="-7" width="149" height="32"/>
+                                                        <rect key="frame" x="215" y="-7" width="149" height="32"/>
                                                         <buttonCell key="cell" type="push" title="Turn one rotation" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NKd-aR-Ng6">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                             <font key="font" metaFont="system"/>
@@ -1161,20 +1161,10 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6FP-Fv-4CB">
-                                        <rect key="frame" x="299" y="8" width="148" height="21"/>
+                                        <rect key="frame" x="457" y="8" width="60" height="21"/>
                                         <subviews>
-                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1IY-uH-r1R">
-                                                <rect key="frame" x="-6" y="-7" width="92" height="32"/>
-                                                <buttonCell key="cell" type="push" title="Connect" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="m91-AS-1Ai">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="system"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <action selector="connectAction:" target="tj4-E2-LXb" id="Dxy-Wo-20V"/>
-                                                </connections>
-                                            </button>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XyM-it-Eai">
-                                                <rect key="frame" x="82" y="-7" width="72" height="32"/>
+                                                <rect key="frame" x="-6" y="-7" width="72" height="32"/>
                                                 <buttonCell key="cell" type="push" title="Done" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Bcd-Vz-6lS">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
@@ -1186,23 +1176,21 @@
                                         </subviews>
                                         <visibilityPriorities>
                                             <integer value="1000"/>
-                                            <integer value="1000"/>
                                         </visibilityPriorities>
                                         <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
                                             <real value="3.4028234663852886e+38"/>
                                         </customSpacing>
                                     </stackView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0I-Rn-Fqn">
-                                        <rect key="frame" x="95" y="355" width="265" height="31"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Set up your robot here" id="KLR-l0-ben">
+                                        <rect key="frame" x="142" y="355" width="241" height="31"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Opsæt din robot her" id="KLR-l0-ben">
                                             <font key="font" metaFont="system" size="26"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Nt-xQ-y13">
-                                        <rect key="frame" x="150" y="182" width="156" height="156"/>
+                                        <rect key="frame" x="185" y="182" width="156" height="156"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="c4j-P9-xNl"/>
                                             <constraint firstAttribute="height" constant="150" id="wzy-zv-sad"/>

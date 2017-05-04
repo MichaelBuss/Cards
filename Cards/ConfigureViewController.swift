@@ -28,7 +28,7 @@ class ConfigureViewController: NSViewController {
         // Do view setup here.
         configureModel.choosePreset(configureModel.chosenPreset)
         updatePreset()
-        connectionEnablesInteraction()
+//        connectionEnablesInteraction()
         
         rotationMMOutlet.stringValue = UserDefaults.standard.string(forKey: "rotationdeg")!
         turnDegreesOutlet.stringValue = UserDefaults.standard.string(forKey: "rotationmm")!
@@ -39,10 +39,6 @@ class ConfigureViewController: NSViewController {
         UserDefaults.standard.set(turnDegreesOutlet?.stringValue, forKey: "rotationdeg")
         UserDefaults.standard.synchronize()
         dismissViewController(self)
-    }
-    
-    @IBAction func connectAction(_ sender: Any) {
-        connectionEnablesInteraction()
     }
     
     @IBAction func PresetAction(_ sender: Any) {
@@ -59,17 +55,17 @@ class ConfigureViewController: NSViewController {
         presetImageOutlet.image = configureModel.presetImage
     }
     
-    func connectionEnablesInteraction() { // Sets up the UI for wether or not a connection is established
-         if isConnected == true {
-            print("Connection is OK")
-            driveOneRotationOutlet.isEnabled = true
-            turnOneRotationOutlet.isEnabled = true
-//            WindowController.runButtonIsEnabled(enable: true)
-         } else {
-            print("Connection is lost")
-            driveOneRotationOutlet.isEnabled = false
-            turnOneRotationOutlet.isEnabled = false
-        }
-    }
+//    func connectionEnablesInteraction() { // Sets up the UI for wether or not a connection is established
+//         if isConnected == true {
+//            print("Connection is OK")
+//            driveOneRotationOutlet.isEnabled = true
+//            turnOneRotationOutlet.isEnabled = true
+////            WindowController.runButtonIsEnabled(enable: true)
+//         } else {
+//            print("Connection is lost")
+//            driveOneRotationOutlet.isEnabled = false
+//            turnOneRotationOutlet.isEnabled = false
+//        }
+//    }
     
 }
