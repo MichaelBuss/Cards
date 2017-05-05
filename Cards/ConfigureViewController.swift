@@ -26,12 +26,13 @@ class ConfigureViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+        presetOutlet.selectItem(withTitle: configureModel.chosenPreset)
         configureModel.choosePreset(configureModel.chosenPreset)
         updatePreset()
 //        connectionEnablesInteraction()
         
-        rotationMMOutlet.stringValue = UserDefaults.standard.string(forKey: "rotationdeg")!
-        turnDegreesOutlet.stringValue = UserDefaults.standard.string(forKey: "rotationmm")!
+        rotationMMOutlet.stringValue = UserDefaults.standard.string(forKey: "rotationmm")!
+        turnDegreesOutlet.stringValue = UserDefaults.standard.string(forKey: "rotationdeg")!
         
     }
     @IBAction func doneAction(_ sender: NSButton) {

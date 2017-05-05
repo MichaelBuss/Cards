@@ -81,7 +81,7 @@ public class Highlighter {
         "constant": getRGB(red: 163,	green:122,	blue:204)
     ]
     
-    static let ident_def = ["gem", "ny funktion"]
+    static let ident_def = ["husk", "ny funktion"]
     static let keywords = ["gentag", "hvis", "ellers", "funktion"]
     static let funcs = ["frem", "tilbage", "drej", "højtaler", "brems", "motor a", "motor b"]
     static let color_consts = [

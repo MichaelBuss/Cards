@@ -11,7 +11,7 @@ import AppKit
 
 struct ConfigureModel {
     
-    var chosenPreset = "Default"
+    var chosenPreset = "Neutral"
     
     var drivingMotors = "B & C"
     var rotationMM = "100"
@@ -24,8 +24,8 @@ struct ConfigureModel {
             chosenPreset = "Berta"
             print("\(chosenPreset) chosen")
             drivingMotors = "B & C"
-            rotationMM = "300"
-            turnDegrees = "170"
+            rotationMM = "183"
+            turnDegrees = "218"
             presetImage = #imageLiteral(resourceName: "Presets_Berta")
             
         case "Beethoven":
@@ -48,8 +48,8 @@ struct ConfigureModel {
             chosenPreset = "Default"
             print("\(chosenPreset) chosen")
             drivingMotors = "B & C"
-            rotationMM = "100"
-            turnDegrees = "100"
+            rotationMM = "183"
+            turnDegrees = "218"
             presetImage = #imageLiteral(resourceName: "Presets_Neutral")
         }
     }

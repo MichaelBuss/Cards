@@ -167,7 +167,7 @@ public class Highlighter {
         i = 0
     }
     
-    static let ident_def = ["Gem", "Ny Funktion"]
+    static let ident_def = ["Husk", "Ny Funktion"]
     static let keywords = ["Gentag", "Hvis", "Ellers", "Funktion"]
     static let funcs = ["Frem", "Tilbage", "Drej", "Højttaler", "Brems", "Motor A", "Motor B"]
     static let consts = ["rød", "grøn", "gul", "blå", "sort", "hvid", "Left", "Right"]
@@ -306,8 +306,8 @@ func idxToInt(string: String, idx: String.Index) -> Int {
     return out
 }*/
 
-let ident_def = ["Gem:", "Ny Funktion:"]
-let keywords = ["Gem:", "Gentag:", "Hvis:", "Ellers:", "Ny Funktion:", "Funktion:"]
+let ident_def = ["Husk:", "Ny Funktion:"]
+let keywords = ["Husk:", "Gentag:", "Hvis:", "Ellers:", "Ny Funktion:", "Funktion:"]
 let built_in = ["Frem:", "Tilbage:", "Drej:", "Højttaler:", "Brems:"]
 
 func generateSyntaxInfo2(string: String) -> [(String, Int, Int)] {

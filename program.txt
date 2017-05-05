@@ -46,3 +46,58 @@ Gem: Banelængde = Seneste Motor B cm
 Tilbage: 5 cm
 Drej: 90 grader mod venstre
 Frem: Banelængde
+
+
+
+
+
+
+####################### NYESTE VERSION #######################
+Frem: 10 cm
+Højtaler: Hello
+
+Ny Funktion: tilVæg (
+    Frem: til kontakt
+    Tilbage: 5 cm
+)
+
+Funktion: toWall
+Drej højre: 90 grader //ØNSKE: Ny syntax til drej, hvor højre/venstre ligger i starten i stedet. meget bedre. Endnu ikke implementeret.
+Frem: til kontakt
+
+Gentag: 3 gange (
+    Drej højre: 40 grader
+    Højtaler: Right
+    Drej venstre: 10 grader
+    Højtaler: Left
+)
+
+Frem: til kontakt
+Hvis:
+    Farve == rød (
+        Motor A: 1 rotation frem
+    )
+    Farve == sort (
+        Motor A: 2 rotationer tilbage
+    )
+
+Tilbage: 5 cm
+Drej: 90 grader venstre
+
+Gentag: til kontakt (
+    Hvis:
+        Farve == rød || Afstand < 20 cm ( //Virker ikke endnu på grund af ||
+            Brems
+        )
+    Ellers: Frem
+)
+
+Tilbage: 5 cm
+Drej venstre: 90 grader
+Tilbage: 1 sekund
+
+Frem: til kontakt
+Husk: Banelængde = Seneste Motor B cm //Er ikke lavet endnu
+Tilbage: 5 cm
+Drej: 90 grader mod venstre
+Frem: Banelængde //Type må gerne være implicit. Altså variablen må gerne også huske at der er tale om cm
