@@ -38,7 +38,7 @@ struct WindowModel {
             let settings = CompileSettings(rotationmm: rotmm, rotationdeg: rotdeg)
             let (pyCode, errors) = Interpretter.compile(code: code, settings: settings)
             
-            if errors.isEmpty {
+            //if errors.isEmpty {
 
             
                 do {
@@ -75,9 +75,9 @@ struct WindowModel {
                 }
             
                 session?.disconnect()
-            } else {
+            /*} else {
                 failed()
-            }
+            }*/
         }
 
     }
