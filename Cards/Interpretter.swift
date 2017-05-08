@@ -27,7 +27,7 @@ class Interpretter: NSObject {
             header = header.replacingOccurrences(of: "{rotationdeg}", with: settings.rotationdeg)
             
             let interpretter = Interpretter()
-            let code = header + interpretter.convertToPython(code: code)
+            let code = header + interpretter.convertToPython(code: interpretter.removeComments(code: code))
             let errors = interpretter.errors
             return (code, errors)
         } catch _ {
