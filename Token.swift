@@ -17,5 +17,6 @@ public enum Token {
     case int(String, Int, Int)
     case cmp(String, Int)
     case and(Int)
+    case comment(String, Int, Int)
     case or(Int)
 }

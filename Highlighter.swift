@@ -114,6 +114,8 @@ public class Highlighter {
         
         while i<len {
             switch tokens[i] {
+            case .comment(let w, let idx, let l):
+                ats.addAttributes([NSForegroundColorAttributeName: Highlighter.ayu["comment"]!], range: NSRange(location: idx, length: l))
             case .word(let w, let idx, var l):
                 /*for (k, v) in Highlighter.replace {
                     if let idx = w.range(of:k) {

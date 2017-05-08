@@ -183,12 +183,31 @@ class Interpretter: NSObject {
         }
         
         if condition.contains("afstand") { //Mangler implementering
-            return modifier+"us.value()/10"
+            let chars = Array(condition.characters)
+            var i = 0
+            while (i < chars.count && !isDigit(char: chars[i])) { i+=1 }
+            let s = i
+            while (i < chars.count && isDigit(char: chars[i])) {i+=1}
+    
+            let n = String(chars[s...i])
+            let number = Int(n)
+            
+            var ad = ""
+            if (condition.contains("<")) {
+                ad = "us.value()/10 < " + n
+            } else if (condition.contains(">")) {
+                ad = "us.value()/10 > " + n
+            }
+            return modifier+ad
         }
         
         print("An error occured. Condition "+condition+" unknown.")
         errors.append("An error occured. Condition "+condition+" unknown.")
         return condition
+    }
+    
+    private func isDigit(char: Character) -> Bool {
+        return Array("0123456789".characters).contains(char)
     }
     
     //Convert for/while argument to Python
