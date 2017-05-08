@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 from ev3dev.auto import *
 
+myDirtyDirtyConstant = 20 # Complete hack to fake variables
+
 # Connect sensors.
 ts = TouchSensor();    assert ts.connected
 cs = ColorSensor();    assert ts.connected
@@ -76,5 +78,5 @@ def turn(unit ="degrees", amount=90, speed=50, direction=1):
 def singleMotor(unit="rotations", amount=1, speed=50, direction=1):
     if unit == "rotations":
         speed = speed*10
-        mA.run_to_rel_pos(position_sp=amount*turnRatio*direction*360, speed_sp=speed, stop_action="brake")
+        mA.run_to_rel_pos(position_sp=amount*direction*360, speed_sp=speed, stop_action="brake")
         mA.wait_while('running')

@@ -1,3 +1,4 @@
+####################### Gammel VERSION #######################
 Frem: 10 cm
 Højttaler: Hello
 
@@ -18,22 +19,20 @@ Gentag: 3 gange (
 )
 
 Frem: til kontakt
-Hvis:
-        Farve == rød (
-                Motor A: mod højre
-        )
-        Farve == sort (
-                Motor A: mod venstre
-        )
+Hvis: Farve == rød (
+    Motor A: 1 rotation frem
+)
+Ellers hvis: Farve == sort (
+    Motor A: 1 rotation tilbage
+)
 
 Tilbage: 5 cm
 Drej: 90 grader venstre
 
 Gentag: til kontakt (
-Hvis:
-        Farve == rød || Afstand < 20 cm (
-                Brems
-        )
+Hvis: Farve == rød || Afstand < 20 cm (
+    Brems
+)
 Ellers: Frem
 )
 
@@ -52,7 +51,11 @@ Frem: Banelængde
 
 
 
-####################### NYESTE VERSION #######################
+
+
+
+
+####################### Nuværende VERSION #######################
 Frem: 10 cm
 Højtaler: Hello
 
@@ -61,7 +64,67 @@ Ny Funktion: tilVæg (
     Tilbage: 5 cm
 )
 
-Funktion: toWall
+Funktion: tilVæg
+Drej: 90 grader højre
+Frem: til kontakt
+
+Gentag: 3 gange (
+    Drej: 40 grader højre
+    Højtaler: Right
+    Drej: 10 grader venstre
+    Højtaler: Left
+)
+Tilbage: 1 sekund
+
+Frem: til kontakt
+Hvis: Farve == rød (
+    Motor A: 1 rotation frem
+)
+Ellers Hvis: Farve == sort (
+    Motor A: 1 rotation tilbage
+)
+
+Tilbage: 5 cm
+Drej: 90 grader venstre
+
+Gentag: til kontakt (
+    Hvis: Farve == rød || Afstand < 20 cm (
+            Brems
+        )
+    Ellers: Frem
+)
+
+Tilbage: 5 cm
+Drej: 90 grader venstre
+Tilbage: 1 sekund
+
+Frem: til kontakt
+Husk: Banelængde = Seneste kørsel cm
+Tilbage: 5 cm
+Drej: 90 grader mod venstre
+Frem: Banelængde cm
+
+
+
+
+
+
+
+
+
+
+
+
+####################### Fremtidig VERSION #######################
+Frem: 10 cm
+Højtaler: Hello
+
+Ny Funktion: tilVæg (
+    Frem: til kontakt
+    Tilbage: 5 cm
+)
+
+Funktion: tilVæg
 Drej højre: 90 grader //ØNSKE: Ny syntax til drej, hvor højre/venstre ligger i starten i stedet. meget bedre. Endnu ikke implementeret.
 Frem: til kontakt
 
@@ -71,6 +134,7 @@ Gentag: 3 gange (
     Drej venstre: 10 grader
     Højtaler: Left
 )
+Tilbage: 1 sekund
 
 Frem: til kontakt
 Hvis:
@@ -78,7 +142,7 @@ Hvis:
         Motor A: 1 rotation frem
     )
     Farve == sort (
-        Motor A: 2 rotationer tilbage
+        Motor A: 1 rotation tilbage
     )
 
 Tilbage: 5 cm

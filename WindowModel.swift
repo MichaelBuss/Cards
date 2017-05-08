@@ -37,7 +37,7 @@ struct WindowModel {
             
             let settings = CompileSettings(rotationmm: rotmm, rotationdeg: rotdeg)
             let (pyCode, errors) = Interpretter.compile(code: code, settings: settings)
-            
+            print(pyCode)
             //if errors.isEmpty {
 
             

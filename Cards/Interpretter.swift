@@ -47,6 +47,19 @@ class Interpretter: NSObject {
         case BadFormat(String)
     }
     
+    func removeComments(code: String) -> String {
+        var res = ""
+        
+        let codeArr = code.components(separatedBy: "\n")
+        
+        for line in codeArr {
+            var splitLine = line.components(separatedBy: "//")
+            res += splitLine[0] + "\n"
+        }
+        
+        return res
+    }
+    
     //Indents lines of code by one tab
     private func indent(code: String) -> String {
         let lines = code.characters.split(separator: "\n")
@@ -125,37 +138,54 @@ class Interpretter: NSObject {
     //Convert if argument to Python
     private func ifArgument(condition: String) -> String {
         var modifier = ""
+        if condition.contains("||") {
+            let conditionArr = condition.components(separatedBy: "||")
+            var res = ""
+            for index in 0...conditionArr.count-1 {
+                res += ifArgument(condition: conditionArr[index])
+                if index<conditionArr.count-1 {
+                    res += " or "
+                }
+            }
+            return res
+        }
+
         if condition.contains("ikke") {
             modifier = "not "
         }
         
-        if condition.contains("farve") {
+        if condition.contains("farve") { //Used to be: isColor(color=\"red\") Dosn't work with more than one in Hvis:
             if condition.contains("rød") {
-                return modifier+"isColor(color=\"red\")"
+                return modifier+"cs.value() == 5"
             }
             if condition.contains("blå") {
-                return modifier+"isColor(color=\"blue\")"
+                return modifier+"cs.value() == 2"
             }
             if condition.contains("grøn") {
-                return modifier+"isColor(color=\"green\")"
+                return modifier+"cs.value() == 3"
             }
             if condition.contains("sort") {
-                return modifier+"isColor(color=\"black\")"
+                return modifier+"cs.value() == 1"
             }
             if condition.contains("hvid") {
-                return modifier+"isColor(color=\"white\")"
+                return modifier+"cs.value() == 6"
             }
             if condition.contains("gul") {
-                return modifier+"isColor(color=\"yellow\")"
+                return modifier+"cs.value() == 4"
             }
             if condition.contains("brun") {
-                return modifier+"isColor(color=\"brown\")"
+                return modifier+"cs.value() == 7"
             }
             //Tilføj selv flere farver her
         }
         if condition.contains("kontakt") {
             return modifier+"ts.value()"
         }
+        
+        if condition.contains("afstand") { //Mangler implementering
+            return modifier+"us.value()/10"
+        }
+        
         print("An error occured. Condition "+condition+" unknown.")
         errors.append("An error occured. Condition "+condition+" unknown.")
         return condition
@@ -183,7 +213,7 @@ class Interpretter: NSObject {
     }
     
     private func stopCommand() -> String {
-        return "\nbreak()\n"
+        return "\nbrake()\n"
     }
     
     private func functionCommand(name: String) -> String {
@@ -215,11 +245,17 @@ class Interpretter: NSObject {
         }
         
         if argument.trimmingCharacters(in: .whitespacesAndNewlines) == "til kontakt" {
-            return "\nwhile not ts.value():\n"+indent(code: "drive(unit=\"forever\", direction=-1)")+"break()\n"
+            return "\nwhile not ts.value():\n"+indent(code: "drive(unit=\"forever\", direction=-1)")+"brake()\n"
         }
         print("An error occured. Argument "+argument+" unknown.")
         errors.append("An error occured. Argument "+argument+" unknown.")
         return argument
+    }
+    
+    func huskCommand(argument: String) ->  String {
+        let variable = splitAtFirstOccurence(str: argument, separator: "=")[0].trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        return variable + "=myDirtyDirtyConstant"
     }
     
     private func forwardCommand(argument: String) -> String {
@@ -241,21 +277,21 @@ class Interpretter: NSObject {
         }
         
         if argument.trimmingCharacters(in: .whitespacesAndNewlines) == "til kontakt" {
-            return "\nwhile not ts.value():\n"+indent(code: "\ndrive(unit=\"forever\")")+"break()\n"
+            return "\nwhile not ts.value():\n"+indent(code: "\ndrive(unit=\"forever\")")+"brake()\n"
         }
         print("An error occured. Argument "+argument+" unknown.")
         errors.append("An error occured. Argument "+argument+" unknown.")
         return argument
     }
     
-    private func singleMotorCommand(argument: String) -> String {
+    private func motorACommand(argument: String) -> String {
         if argument.contains("rotation") {
             let dist = splitAtFirstOccurence(str: argument, separator: " ")[0]
             if argument.contains("frem") {
-                return "\nsingleMotor(unit=\"rotation\", amount="+dist+", speed=50, direction=1)\n"
+                return "\nsingleMotor(amount="+dist+", direction=1)\n"
             }
             else {
-                return "\nsingleMotor(unit=\"rotation\", amount="+dist+", speed=50, direction=-1)\n"
+                return "\nsingleMotor(amount="+dist+", direction=-1)\n"
             }
         }
         
@@ -402,6 +438,14 @@ class Interpretter: NSObject {
                     
                     trimmedCode = split[1].trimmingCharacters(in: .whitespacesAndNewlines)
                     
+                case "husk":
+                    //Splitting string at newline
+                    split = splitAtFirstOccurence(str: rest, separator: "\n")
+                    
+                    mainBody += huskCommand(argument: split[0])
+                    
+                    trimmedCode = split[1].trimmingCharacters(in: .whitespacesAndNewlines)
+                    
                 case "tilbage":
                     //Splitting string at newline
                     split = splitAtFirstOccurence(str: rest, separator: "\n")
@@ -410,11 +454,11 @@ class Interpretter: NSObject {
                     
                     trimmedCode = split[1].trimmingCharacters(in: .whitespacesAndNewlines)
                     
-                case "motor A":
+                case "motor a":
                     //Splitting string at newline
                     split = splitAtFirstOccurence(str: rest, separator: "\n")
                     
-                    mainBody += singleMotorCommand(argument: split[0])
+                    mainBody += motorACommand(argument: split[0])
                     
                     trimmedCode = split[1].trimmingCharacters(in: .whitespacesAndNewlines)
                     

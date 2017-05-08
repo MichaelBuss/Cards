@@ -33,8 +33,8 @@ class SnippetViewController: NSViewController, NSTableViewDataSource, NSTableVie
         Snippet(title: "Højtaler", content: #imageLiteral(resourceName: "Snippets_Speaker"), standard: "Højtaler: LEGO"),
         Snippet(title: "Ny funktion", content: #imageLiteral(resourceName: "Snippets_Function New"), standard: "Ny Funktion: FunktionsNavn (\n\t//Skriv kode her mellem parenteserne og brug det senere\n\n)"),
         Snippet(title: "Brug funktion", content: #imageLiteral(resourceName: "Snippets_Function Use"), standard: "Funktion: FunktionsNavn"),
-        Snippet(title: "Gentag", content: #imageLiteral(resourceName: "Snippets_Loop"), standard: "Gentag: 2 gange (\n\t//Skriv kode her mellem parenteserne og det gentages\n\n)"),
-        Snippet(title: "Gør hvis", content: #imageLiteral(resourceName: "Snippets_Do If"), standard: "Hvis:\n\tFarve==blå (\n\t\t//Skriv hvad der skal ske her, mellem parenteserne\n\t\t\n\t\t)\n\tFarve==rød (\n\t\t//Skriv hvad der skal ske her, mellem parenteserne\n\t\t\n\t\t)"),
+        Snippet(title: "Gentag", content: #imageLiteral(resourceName: "Snippets_Loop"), standard: "Gentag: 2 gange (\n\t//Skriv kode her mellem parenteserne og det gentages\n\t\n)"),
+        Snippet(title: "Gør hvis", content: #imageLiteral(resourceName: "Snippets_Do If"), standard: "Hvis: Farve == blå eller Farve == grøn (\n//Skriv hvad der skal ske her, mellem parenteserne\n\t\n)\nEllers hvis: Farve==rød (\n//Skriv hvad der skal ske her, mellem parenteserne\n\t\n)\n"),
         Snippet(title: "Husk", content: #imageLiteral(resourceName: "Snippets_Remember"), standard: "Husk: Seneste MotorB rotationer")
     ]
     override func viewDidLoad() {

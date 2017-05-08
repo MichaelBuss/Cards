@@ -662,11 +662,11 @@
             <objects>
                 <viewController title="Hjælp" id="Zbt-sN-Ijk" customClass="HelpViewController" customModule="Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="oob-fk-Sym">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="255"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="600"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kk0-RE-gx9">
-                                <rect key="frame" x="-2" y="216" width="454" height="31"/>
+                                <rect key="frame" x="-2" y="561" width="454" height="31"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Velkommen til Cards!" id="v7V-C1-vfi">
                                     <font key="font" size="26" name=".AppleSystemUIFontLight"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -674,16 +674,16 @@
                                 </textFieldCell>
                             </textField>
                             <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8i-jz-nSx">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="208"/>
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="553"/>
                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="jMN-kt-mN2">
-                                    <rect key="frame" x="0.0" y="0.0" width="450" height="208"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="450" height="553"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="KBP-qr-Wxj">
-                                            <rect key="frame" x="0.0" y="0.0" width="450" height="208"/>
+                                        <textView editable="NO" importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="KBP-qr-Wxj">
+                                            <rect key="frame" x="0.0" y="0.0" width="450" height="553"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="450" height="208"/>
+                                            <size key="minSize" width="450" height="553"/>
                                             <size key="maxSize" width="463" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
@@ -695,7 +695,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="9Ii-oP-Yfy">
-                                    <rect key="frame" x="434" y="0.0" width="16" height="208"/>
+                                    <rect key="frame" x="434" y="0.0" width="16" height="553"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
@@ -948,7 +948,7 @@
                             <colorPickerItem showsAlpha="NO" id="01t-ms-7S3"/>
                             <touchBarItem id="IzU-Jo-KzO">
                                 <viewController key="viewController" id="KU2-r4-bRh">
-                                    <button key="view" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BWB-Vz-nNc">
+                                    <button key="view" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BWB-Vz-nNc">
                                         <rect key="frame" x="0.0" y="0.0" width="84" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="push" bezelStyle="rounded" image="Run" imagePosition="overlaps" alignment="center" alternateImage="Stop" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WYL-Ph-cWf">
