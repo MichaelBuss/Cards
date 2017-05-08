@@ -30,7 +30,6 @@ class ViewController: NSViewController, NSTextStorageDelegate {
         // Update the view, if already loaded.
         }
     }
-
     
     func textStorage(_ textStorage: NSTextStorage, didProcessEditing editedMask: NSTextStorageEditActions, range editedRange: NSRange, changeInLength delta: Int) {
         //var range = textViewOutlet.selectedRange()
@@ -38,9 +37,6 @@ class ViewController: NSViewController, NSTextStorageDelegate {
         
         let r = SmartReplacer(ats: textStorage, sel: textViewOutlet)
         let posDelta = r.replace()
-        
-        
-        
         
         //for _ in 0...(posDelta) { textViewOutlet.moveLeft(nil) }
         

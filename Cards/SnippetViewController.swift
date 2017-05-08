@@ -28,14 +28,15 @@ class SnippetViewController: NSViewController, NSTableViewDataSource, NSTableVie
         Snippet(title: "Tilbage", content: #imageLiteral(resourceName: "Snippets_Arrow Backward"), standard: "Tilbage: 5 cm"),
         Snippet(title: "Drej", content: #imageLiteral(resourceName: "Snippets_Arrow Turn Sharp"), standard: "Drej: 90 grader højre"),
         Snippet(title: "Brems", content: #imageLiteral(resourceName: "Snippets_Break"), standard: "Brems"),
-        Snippet(title: "Enkelt Stor Motor", content: #imageLiteral(resourceName: "Snippets_Motor Large"), standard: "MotorD: 1 rotation højre"),
-        Snippet(title: "Enkelt Mellem Motor", content: #imageLiteral(resourceName: "Snippets_Motor Small"), standard: "MotorA: 1 rotation højre"),
+        Snippet(title: "Enkelt Stor Motor", content: #imageLiteral(resourceName: "Snippets_Motor Large"), standard: "Motor D: 1 rotation frem"),
+        Snippet(title: "Enkelt Mellem Motor", content: #imageLiteral(resourceName: "Snippets_Motor Small"), standard: "Motor A: 1 rotation frem"),
         Snippet(title: "Højtaler", content: #imageLiteral(resourceName: "Snippets_Speaker"), standard: "Højtaler: LEGO"),
-        Snippet(title: "Ny funktion", content: #imageLiteral(resourceName: "Snippets_Function New"), standard: "Ny Funktion: FunktionsNavn (\n\t//Skriv kode her mellem parenteserne og brug det senere\n\n)"),
-        Snippet(title: "Brug funktion", content: #imageLiteral(resourceName: "Snippets_Function Use"), standard: "Funktion: FunktionsNavn"),
-        Snippet(title: "Gentag", content: #imageLiteral(resourceName: "Snippets_Loop"), standard: "Gentag: 2 gange (\n\t//Skriv kode her mellem parenteserne og det gentages\n\t\n)"),
-        Snippet(title: "Gør hvis", content: #imageLiteral(resourceName: "Snippets_Do If"), standard: "Hvis: Farve == blå eller Farve == grøn (\n//Skriv hvad der skal ske her, mellem parenteserne\n\t\n)\nEllers hvis: Farve==rød (\n//Skriv hvad der skal ske her, mellem parenteserne\n\t\n)\n"),
-        Snippet(title: "Husk", content: #imageLiteral(resourceName: "Snippets_Remember"), standard: "Husk: Seneste MotorB rotationer")
+        Snippet(title: "Ny funktion", content: #imageLiteral(resourceName: "Snippets_Function New"), standard: "Ny Funktion: MitFunktionsNavn (\n\t//Skriv kode her mellem parenteserne så det kan bruges senere\n\t\n)"),
+        Snippet(title: "Brug funktion", content: #imageLiteral(resourceName: "Snippets_Function Use"), standard: "Funktion: MitFunktionsNavn"),
+        Snippet(title: "Gentag", content: #imageLiteral(resourceName: "Snippets_Loop"), standard: "Gentag: 2 gange (\n\t//Skriv kode her mellem parenteserne for at gentage det\n\t\n)"),
+        Snippet(title: "Gør hvis", content: #imageLiteral(resourceName: "Snippets_Do If"), standard: "Hvis: Farve == blå eller Farve == grøn (\n\t//Skriv hvad der skal ske her, mellem parenteserne\n\t\n)\nEllers hvis: Farve == rød (\n\t//Skriv hvad der skal ske her, mellem parenteserne\n\t\n)\n"),
+        Snippet(title: "Husk", content: #imageLiteral(resourceName: "Snippets_Remember"), standard: "Husk: MitHuskeNavn = Seneste kørsel cm"),
+        Snippet(title: "Kommentar", content: #imageLiteral(resourceName: "Comment"), standard: "// Jeg er en kommentar ")
     ]
     override func viewDidLoad() {
         super.viewDidLoad()

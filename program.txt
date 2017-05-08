@@ -56,18 +56,20 @@ Frem: Banelængde
 
 
 ####################### Nuværende VERSION #######################
+// Opgave 1
 Frem: 10 cm
 Højtaler: Hello
 
+// Opgave 2
 Ny Funktion: tilVæg (
     Frem: til kontakt
     Tilbage: 5 cm
 )
-
 Funktion: tilVæg
 Drej: 90 grader højre
 Frem: til kontakt
 
+// Opgave 3
 Gentag: 3 gange (
     Drej: 40 grader højre
     Højtaler: Right
@@ -75,29 +77,30 @@ Gentag: 3 gange (
     Højtaler: Left
 )
 Tilbage: 1 sekund
-
 Frem: til kontakt
+
+// Opgave 4
 Hvis: Farve == rød (
     Motor A: 1 rotation frem
 )
 Ellers Hvis: Farve == sort (
     Motor A: 1 rotation tilbage
 )
-
 Tilbage: 5 cm
 Drej: 90 grader venstre
 
+// Opgave 5
 Gentag: til kontakt (
     Hvis: Farve == rød || Afstand < 20 cm (
             Brems
         )
     Ellers: Frem
 )
-
 Tilbage: 5 cm
 Drej: 90 grader venstre
 Tilbage: 1 sekund
 
+// Opgave 6
 Frem: til kontakt
 Husk: Banelængde = Seneste kørsel cm
 Tilbage: 5 cm
@@ -116,27 +119,31 @@ Frem: Banelængde cm
 
 
 ####################### Fremtidig VERSION #######################
+// Opgave 1
 Frem: 10 cm
 Højtaler: Hello
 
+// Opgave 2
 Ny Funktion: tilVæg (
     Frem: til kontakt
     Tilbage: 5 cm
 )
 
 Funktion: tilVæg
-Drej højre: 90 grader //ØNSKE: Ny syntax til drej, hvor højre/venstre ligger i starten i stedet. meget bedre. Endnu ikke implementeret.
+Højre: 90 grader //ØNSKE: Ny syntax til drej, hvor højre/venstre ligger i starten i stedet. meget bedre. Endnu ikke implementeret.
 Frem: til kontakt
 
+// Opgave 3
 Gentag: 3 gange (
-    Drej højre: 40 grader
+    Højre: 40 grader
     Højtaler: Right
-    Drej venstre: 10 grader
+    Venstre: 10 grader
     Højtaler: Left
 )
 Tilbage: 1 sekund
-
 Frem: til kontakt
+
+// Opgave 4
 Hvis:
     Farve == rød (
         Motor A: 1 rotation frem
@@ -144,24 +151,24 @@ Hvis:
     Farve == sort (
         Motor A: 1 rotation tilbage
     )
-
 Tilbage: 5 cm
-Drej: 90 grader venstre
+Vesntre: 90 grader
 
+// Opgave 5
 Gentag: til kontakt (
     Hvis:
-        Farve == rød || Afstand < 20 cm ( //Virker ikke endnu på grund af ||
+        Farve == rød || Afstand < 20 cm (
             Brems
         )
     Ellers: Frem
 )
-
 Tilbage: 5 cm
-Drej venstre: 90 grader
+Venstre: 90 grader
 Tilbage: 1 sekund
 
+// Opgave 6
 Frem: til kontakt
-Husk: Banelængde = Seneste Motor B cm //Er ikke lavet endnu
+Husk: Banelængde = Seneste kørsel cm //Er ikke lavet endnu
 Tilbage: 5 cm
-Drej: 90 grader mod venstre
+Venstre: 90 grader
 Frem: Banelængde //Type må gerne være implicit. Altså variablen må gerne også huske at der er tale om cm
