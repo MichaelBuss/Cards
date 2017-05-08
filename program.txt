@@ -125,13 +125,13 @@ Ny Funktion: tilVæg (
 )
 
 Funktion: tilVæg
-Drej højre: 90 grader //ØNSKE: Ny syntax til drej, hvor højre/venstre ligger i starten i stedet. meget bedre. Endnu ikke implementeret.
+Højre: 90 grader //ØNSKE: Ny syntax til drej, hvor højre/venstre ligger i starten i stedet. meget bedre. Endnu ikke implementeret.
 Frem: til kontakt
 
 Gentag: 3 gange (
-    Drej højre: 40 grader
+    Højre: 40 grader
     Højtaler: Right
-    Drej venstre: 10 grader
+    Venstre: 10 grader
     Højtaler: Left
 )
 Tilbage: 1 sekund
@@ -146,22 +146,22 @@ Hvis:
     )
 
 Tilbage: 5 cm
-Drej: 90 grader venstre
+Vesntre: 90 grader
 
 Gentag: til kontakt (
     Hvis:
-        Farve == rød || Afstand < 20 cm ( //Virker ikke endnu på grund af ||
+        Farve == rød || Afstand < 20 cm (
             Brems
         )
     Ellers: Frem
 )
 
 Tilbage: 5 cm
-Drej venstre: 90 grader
+Venstre: 90 grader
 Tilbage: 1 sekund
 
 Frem: til kontakt
-Husk: Banelængde = Seneste Motor B cm //Er ikke lavet endnu
+Husk: Banelængde = Seneste kørsel cm //Er ikke lavet endnu
 Tilbage: 5 cm
-Drej: 90 grader mod venstre
+Venstre: 90 grader
 Frem: Banelængde //Type må gerne være implicit. Altså variablen må gerne også huske at der er tale om cm
