@@ -83,7 +83,7 @@ public class Highlighter {
     
     static let ident_def = ["husk", "ny funktion"]
     static let keywords = ["gentag", "hvis", "ellers", "ellers hvis", "funktion"]
-    static let funcs = ["frem", "tilbage", "drej", "højtaler", "brems", "motor a", "motor b"]
+    static let funcs = ["frem", "tilbage", "drej", "højtaler", "brems", "motor a", "motor b", "motor c", "motor d"]
     static let color_consts = [
         "rød": (Highlighter.ayu["keyword"], NSColor.white),
         "grøn": (Highlighter.ayu["string"], NSColor.white),
