@@ -32,6 +32,18 @@ class WindowController: NSWindowController, SnippetViewControllerDelegate {
         statusTextFieldOutlet.isSelectable = false
         statusTextFieldOutlet.stringValue = "Skriv noget kode 👩‍💻👨‍💻"
         
+        let viewCtrl: ViewController = self.contentViewController as! ViewController
+        
+        let nc = NotificationCenter.default
+        nc.addObserver(forName: Notification.Name.NSTextViewDidChangeSelection, object: viewCtrl.textViewOutlet, queue: nil) { (notification) in
+            let textView = notification.object as! NSTextView
+            if textView.selectedRange().length > 0 {
+                self.runOutlet.image = #imageLiteral(resourceName: "Run Selection")
+            } else {
+                self.runOutlet.image = #imageLiteral(resourceName: "Run")
+            }
+        }
+        
         // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     }
     
@@ -50,7 +62,6 @@ class WindowController: NSWindowController, SnippetViewControllerDelegate {
         } else {
             let range = viewCtrl.textViewOutlet.selectedRange()
             textToRun = ((viewCtrl.textViewOutlet.string as NSString?)?.substring(with: range))!
-            runOutlet.image = #imageLiteral(resourceName: "Run Selection")
         }
         
         windowModel.runPython(code: textToRun, compiled: {

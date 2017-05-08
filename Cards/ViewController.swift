@@ -30,7 +30,6 @@ class ViewController: NSViewController, NSTextStorageDelegate {
         // Update the view, if already loaded.
         }
     }
-
     
     func textStorage(_ textStorage: NSTextStorage, didProcessEditing editedMask: NSTextStorageEditActions, range editedRange: NSRange, changeInLength delta: Int) {
         //var range = textViewOutlet.selectedRange()
