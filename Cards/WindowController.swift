@@ -50,7 +50,7 @@ class WindowController: NSWindowController, SnippetViewControllerDelegate {
         } else {
             let range = viewCtrl.textViewOutlet.selectedRange()
             textToRun = ((viewCtrl.textViewOutlet.string as NSString?)?.substring(with: range))!
-            runOutlet.image = #imageLiteral(resourceName: "Snippets_Loop") // Ret det her billede her !!!!!!!!!!!!
+            runOutlet.image = #imageLiteral(resourceName: "Run Selection")
         }
         
         windowModel.runPython(code: textToRun, compiled: {
