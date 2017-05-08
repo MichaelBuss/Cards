@@ -32,8 +32,6 @@ class WindowController: NSWindowController, SnippetViewControllerDelegate {
         statusTextFieldOutlet.isSelectable = false
         statusTextFieldOutlet.stringValue = "Skriv noget kode 👩‍💻👨‍💻"
         
-        
-        
         // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     }
     
@@ -45,19 +43,36 @@ class WindowController: NSWindowController, SnippetViewControllerDelegate {
         
         runOutlet.image = #imageLiteral(resourceName: "Stop")
         statusTextFieldOutlet.stringValue = "Overfører...⏳"
-        windowModel.runPython(code: viewCtrl.textViewOutlet.string!, compiled: {
+        var textToRun = ""
+        
+        if viewCtrl.textViewOutlet.selectedRange().length == 0 {
+            textToRun = viewCtrl.textViewOutlet.string!
+        } else {
+            let range = viewCtrl.textViewOutlet.selectedRange()
+            textToRun = ((viewCtrl.textViewOutlet.string as NSString?)?.substring(with: range))!
+            runOutlet.image = #imageLiteral(resourceName: "Snippets_Loop") // Ret det her billede her !!!!!!!!!!!!
+        }
+        
+        windowModel.runPython(code: textToRun, compiled: {
             self.statusTextOutlet.stringValue = "Robotten kører 🤖"
         }, finished: {
             self.statusTextOutlet.stringValue = "Færdig 🙌"
             self.runOutlet.image = #imageLiteral(resourceName: "Run")
+            self.resetStatusTextAfter(seconds: 6)
         }, failed: {
             self.statusTextOutlet.stringValue = "Fejl"
             self.runOutlet.image = #imageLiteral(resourceName: "Run")
+            self.resetStatusTextAfter(seconds: 6)
         })
-        
         
 //        runOutlet.isEnabled = true //Enable button again
         
+    }
+    
+    func resetStatusTextAfter(seconds: Double) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            self.statusTextOutlet.stringValue = "Skriv noget kode 👩‍💻👨‍💻"
+        }
     }
     
     func runButtonIsEnabled(enable: Bool) {
@@ -79,7 +94,12 @@ class WindowController: NSWindowController, SnippetViewControllerDelegate {
         if let position = viewCtrl.textViewOutlet.selectedRanges.first?.rangeValue.location {
             let pos = nextLineBreak(text: text!, position: position)
             
-            text = text?.insert(string: "\n\(snippet.standard)", ind: pos)
+            if characterBeforeCursor(textView: viewCtrl.textViewOutlet) == "\n" {
+                text = text?.insert(string: "\(snippet.standard)", ind: pos)
+            } else {
+                text = text?.insert(string: "\n\(snippet.standard)", ind: pos)
+            }
+            
         } else {
             text?.append("\n\(snippet.standard)")
         }
@@ -88,6 +108,14 @@ class WindowController: NSWindowController, SnippetViewControllerDelegate {
         
         print()
         
+    }
+    
+    private func characterBeforeCursor(textView: NSTextView) -> String? {
+        
+        let selectedRanges = textView.selectedRanges
+        let text = textView.string
+    
+        return (text! as NSString).substring(with: NSRange(location: selectedRanges.first!.rangeValue.location-1, length: 1))
     }
     
     func nextLineBreak(text: String, position: Int) -> Int {

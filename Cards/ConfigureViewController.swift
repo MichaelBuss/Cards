@@ -26,8 +26,13 @@ class ConfigureViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
-        presetOutlet.selectItem(withTitle: configureModel.chosenPreset)
-        configureModel.choosePreset(configureModel.chosenPreset)
+        if let preset = UserDefaults.standard.string(forKey: "preset") {
+            presetOutlet.selectItem(withTitle: preset)
+            configureModel.choosePreset(preset)
+        } else {
+            presetOutlet.selectItem(withTitle: configureModel.chosenPreset)
+            configureModel.choosePreset(configureModel.chosenPreset)
+        }
         updatePreset()
 //        connectionEnablesInteraction()
         
@@ -38,6 +43,7 @@ class ConfigureViewController: NSViewController {
     @IBAction func doneAction(_ sender: NSButton) {
         UserDefaults.standard.set(rotationMMOutlet?.stringValue, forKey: "rotationmm")
         UserDefaults.standard.set(turnDegreesOutlet?.stringValue, forKey: "rotationdeg")
+        UserDefaults.standard.set(presetOutlet.selectedItem?.title, forKey: "preset")
         UserDefaults.standard.synchronize()
         dismissViewController(self)
     }

@@ -39,9 +39,6 @@ class ViewController: NSViewController, NSTextStorageDelegate {
         let r = SmartReplacer(ats: textStorage, sel: textViewOutlet)
         let posDelta = r.replace()
         
-        
-        
-        
         //for _ in 0...(posDelta) { textViewOutlet.moveLeft(nil) }
         
         //var range = textViewOutlet.selectedRange()
