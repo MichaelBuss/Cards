@@ -92,7 +92,7 @@ public class Highlighter {
         "sort": (NSColor.init(red: 0.5, green: 0.5, blue:0.5, alpha: 1), NSColor.white),
         "hvid": (NSColor.white, NSColor.init(red: 0.7, green: 0.7, blue: 0.7, alpha: 1))
     ]
-    static let consts = ["left", "right", "til væg", "til kontakt", "farve", "afstand", "banelængde", "seneste kørsel"]
+    static let consts = ["left", "right", "til væg", "til kontakt", "farve", "afstand", "banelængde cm", "seneste kørsel cm"]
     static let units = ["cm", "mm", "grader"]
     
     static let colors = ["ident_def": Highlighter.ayu["keyword"],

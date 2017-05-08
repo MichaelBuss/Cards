@@ -455,7 +455,9 @@ class Interpretter: NSObject {
                     
                     mainBody += forwardCommand(argument: split[0])
                     
-                    trimmedCode = split[1].trimmingCharacters(in: .whitespacesAndNewlines)
+                    //if (split.count > 2) {
+                        trimmedCode = split[1].trimmingCharacters(in: .whitespacesAndNewlines)
+                    //}
                     
                 case "husk":
                     //Splitting string at newline
