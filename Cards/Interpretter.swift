@@ -419,6 +419,7 @@ class Interpretter: NSObject {
                     
                     //The code that the if-statement decides is converted to Python recursively and added
                     mainBody += indent(code: convertToPython(code: split[0]))
+                    mainBody += "brake()\n"
                     
                     //Next round of the loop will use the remaining code
                     trimmedCode = split[1].trimmingCharacters(in: .whitespacesAndNewlines)
