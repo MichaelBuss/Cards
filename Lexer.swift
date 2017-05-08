@@ -116,13 +116,16 @@ public class Lexer {
                 }
             case "/":
                 let start = cur_idx
-                if (cur_idx+2 < end && chars[cur_idx+1] == "/") {
-                    cur_idx += 2
+                if (cur_idx+1 < end && chars[cur_idx+1] == "/") {
+                    cur_idx += 1
                     while (cur_idx+1 < end && chars[cur_idx] != "\n") { cur_idx += 1 }
-                    out.append(Token.comment(String(chars[start...cur_idx]), start, cur_idx))
+                    //if (cur_idx == end) {cur_idx -= 1}
+                    out.append(Token.comment(String(chars[start...cur_idx]), start, cur_idx-start))
                 } else {
-                    throw LexerError.UnexpectedInput("Expected / but got " + String(chars[cur_idx]))
+                    
+                    //throw LexerError.UnexpectedInput("Expected / but got " + String(chars[cur_idx]))
                 }
+                cur_idx += 1
             case _ where isDigit(char: chars[cur_idx]):
                 let start_idx = cur_idx
                 while cur_idx < end && isDigit(char: chars[cur_idx]) { cur_idx += 1 }
